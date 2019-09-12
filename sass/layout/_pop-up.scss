@@ -1,0 +1,78 @@
+.logIn,
+.signUp{
+  @include absCenter();
+  position: fixed;
+  @include flexCenter();
+  flex-direction: column;
+  width: 400px;
+  background: #fff;
+  z-index: 1999999;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  border-radius: 2px;
+  padding: 50px 0;
+  transform: translate(-50%, -50%) scale(1, 0);
+  opacity: 0;
+  transition: transform 400ms, opacity 0.2s;
+
+  &.open {
+    transform: translate(-50%, -50%) scale(1, 1);
+    opacity: 1;
+  }
+
+  > .closeL {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size: 20px;
+    font-weight: 900;
+    cursor: pointer;
+  }
+
+  > form {
+    margin: 50px 0 0;
+    @include flexCenter();
+    flex-direction: column;
+
+    > .or {
+      margin: 20px 0;
+    }
+
+    > input[type="submit"] {
+      max-width: 180px;
+      color: white;
+      background: #44b9c2;
+      outline: none;
+      border: none;
+      box-shadow: 0 2px 3px rgba(0, 0, 0, 0.7);
+      padding: 10px 30px;
+      border-radius: 100px;
+      margin: 40px auto 40px;
+      transition: .4s;
+
+      &:hover {
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+        transform: translateY(-3px);
+      }
+
+      &:active {
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.6);
+        transform: translateY(-1px);
+      }
+    }
+  }
+
+  input {
+    width: 250px;
+    border: 2px solid rgba(164, 164, 164, 0.61);
+    font-size: 20px;
+    border-radius: 8px;
+    color: #44b9c2;
+    padding: 5px 10px;
+    background: rgba(237, 237, 237, 0.3);
+  }
+}
+
+.signUpBtn {
+  cursor: pointer;
+  text-decoration: underline;
+}

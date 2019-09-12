@@ -1,0 +1,1592 @@
+@import "../base/utilities";
+.hero_Section {
+  width: 100vw;
+  background: $hero-primary-color;
+
+  background-image: url('../img/hero_section/hero_back_bg.png');
+  background-size: 100% 100%;
+
+  &.home {
+    height: 100vh;
+
+    @media screen and (max-width: $break-hero-flex) {
+      height: auto;
+    }
+  }
+
+  &.about {
+    background: #fff;
+    height: auto;
+  }
+
+  @media screen and (max-width: $break-hero-flex) {
+    height: auto;
+  }
+
+    .backBg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    opacity: 0.7;
+    min-height: 100vh;
+    max-height: 100vh;
+
+    &.desk {
+
+      @media screen and (max-width: $break-hero-flex) {
+        display: none;
+      }
+    }
+
+    &.mob {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      display: none;
+      max-height: none;
+
+      @media screen and (max-width: $break-hero-flex) {
+        height: 100%;
+        min-height: 100vh;
+        display: block;
+      }
+    }
+
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+:focus {
+  outline: none;
+}
+
+$nav-height: 110px;
+$nav-li-font: sans-serif;
+$nav-btn-font-size: 12px;
+
+//.mainBg {
+//  position: absolute;
+//  width: 100vw;
+//  height: 100vh;
+//  background-image: url('../img/hero_section/hero_bg.png');
+//  background-size: cover;
+//}
+
+.wrapper {
+  position: relative;
+  max-width: 1440px;
+  height: 100vh;
+  display: block;
+  margin: 0 auto;
+  //box-shadow : 0px 0px 30px rgba(0, 0, 0, 0.5);
+
+  &.about {
+    height: auto;
+  }
+
+  &.classes {
+    max-width: 33340px;
+  }
+
+  @media screen and (max-width: $break-hero-flex) {
+    height: auto;
+  }
+
+  $mobNav: 80px;
+  $liHeight: 100px;
+
+  > .mobile {
+    position: relative;
+    height: $mobNav;
+    background: #fff;
+    display: none;
+    z-index: 9999999999999;
+
+    @media screen and (max-width: $break-nav) {
+      display: block;
+    }
+
+    > .menu {
+      position: absolute;
+      top: 0;
+      left: 4vw;
+      height: 100%;
+
+      > i {
+        line-height: $mobNav;
+        font-size: 33px;
+      }
+    }
+
+    > .rightNav {
+      position: absolute;
+      right: 5vw;
+      height: 100%;
+      top: 0;
+
+      > .right {
+        line-height: $mobNav;
+        font-size: 16px;
+        font-family: 'Myriad Pro Regular';
+        font-weight: 900;
+        padding: 9px 30px;
+        background: #b9e7e8;
+        border-radius: 150px;
+        color: rgba(78, 78, 78, 0.96);
+
+        &:hover {
+          background: white;
+          border: 1px solid #32ffec;
+        }
+      }
+    }
+
+    > .mobNav {
+      width: 100vw;
+      overflow-y: scroll;
+      position: absolute;
+      top: 100%;
+      transform: scale(1, 0);
+      opacity: 0;
+      background: #fff;
+      font-family: "Myriad Pro";
+      transition: all 300ms, height 300ms, opacity 100ms;
+      transform-origin: top;
+
+      &.open {
+        transform: scale(1, 1);
+        opacity: 1;
+      }
+
+      > ul {
+        margin: 0;
+        font-size: 35px;
+
+        > li {
+          position: relative;
+          color: #fff;
+          height: $liHeight;
+          line-height: $liHeight;
+          font-size: 15px;
+          transition: all 300ms;
+          border: 1px solid rgba(0, 0, 0, 0.1);
+
+          > a {
+            color: #808080;
+            font-size: 25px;
+            display: block;
+            padding: 0 10vw;
+            background: transparent;
+            font-weight: 800;
+          }
+
+          > span {
+            position: absolute;
+            top: 0;
+            line-height: $liHeight;
+            right: 10vw;
+
+            &.rot {
+
+              > i {
+                transform: rotateZ(180deg);
+              }
+            }
+
+            &.rotBack {
+
+              > i {
+                transform: rotateZ(0deg);
+              }
+            }
+            > i {
+              transition: 300ms;
+              color: #808080;
+              font-size: 25px;
+            }
+          }
+
+          > ul {
+            position: relative;
+            width: auto;
+            height: auto;
+            top: 0;
+            transform: scale(1, 1);
+            transform-origin: top;
+            transition: 300ms;
+            background: rgba(249, 249, 249, 0.98);
+
+            &.none {
+              > li {
+                transform: scale(1);
+                opacity: 1;
+                height: $liHeight;
+              }
+            }
+
+            > li {
+              //box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+              height: 0;
+              padding: 0 $liHeight;
+              opacity: 0;
+              transform: scale(0);
+              color: #fff;
+              font-size: 25px;
+              transition: height 300ms, opacity 100ms, color 300ms;
+
+              > a {
+                color: #808080;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  > .nav {
+    width: 100%;
+    position: relative;
+    max-width: 1440px;
+    margin: 0 auto;
+    top: 0;
+    left: 0;
+    z-index: 9999999999999999999;
+    height: $nav-height;
+    @include flexCenter();
+    justify-content: flex-start;
+    @media screen and (max-width: $break-nav) {
+      display: none;
+    }
+
+    @media screen and (max-width: $break-medium-fix1) {
+      zoom: 0.8;
+    }
+
+    > .logo {
+      margin-left: 100px;
+      position: relative;
+      width: 130px;
+      height: 160px;
+      z-index: 1;
+
+      > .rounded {
+        width: 130px;
+        height: 170%;
+        position: absolute;
+        top: -60px;
+      }
+
+      >.mainLogo {
+        position: absolute;
+        z-index: 1;
+
+        > img {
+          width: 71px;
+        }
+
+        @include absCenter();
+        top: 60%;
+      }
+    }
+
+    > nav {
+      margin-top: 20px;
+      margin-left: 20px;
+      width: 40%;
+
+      > ul {
+        margin: 0;
+        display: flex;
+
+        > li {
+          position: relative;
+          @include flexCenter();
+          padding: 30px 10px;
+          margin: 10px;
+          perspective: 1000px;
+
+          > a {
+            color: black;
+            text-transform: uppercase;
+            white-space: nowrap;
+            font-size: 15px;
+            font-family: "Myriad Pro Bold";
+          }
+
+          > .dropdown {
+            display: block;
+            position: absolute;
+            top: calc(100%);
+            left: 0;
+            width: 500px;
+            height: 400px;
+            background: rgba(255, 255, 255, 0.83);
+            border-radius: 5px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 100ms ease-in-out 100ms, transform 280ms;
+            transform-origin: top;
+            transform: translateY(10px) rotateX(-90deg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            > .caret {
+              position: absolute;
+              width: 14px;
+              height: 14px;
+              top: -7px;
+              left: 20px;
+              background: $hero-primary-color;
+              transform: rotateZ(45deg);
+              z-index: -1;
+            }
+
+            > .leftContent,
+            > .rightContent{
+              width: 30%;
+              //border: 1px solid black;
+              height: 100%;
+
+              > ul {
+
+                > li {
+                  margin: 5px 3px;
+                  padding: 10px 35px;
+                  background: $button-primary-color;
+                  border-radius: 8px;
+                  transition: 300ms;
+                  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+
+                  &:hover {
+                    background: $button-primary-hover-color;
+                  }
+                }
+
+                > li.headLi {
+                  margin: 0;
+                  font-size: 24px;
+                  padding: 14px auto;
+                  background: $hero-primary-color;
+                  font-family: "Myriad Pro Bold";
+                  border-radius: 0px;
+                  border-top-left-radius: 5px;
+                }
+              }
+
+            }
+
+            > .rightContent {
+              width: 70%;
+              //border: 1px solid black;
+              height: 100%;
+              box-shadow: -2px 0px 2px rgba(0, 0, 0, 0.3);
+
+              > ul {
+
+                > li {
+                  background: #fff;
+                }
+
+                > li.headLi {
+                  border-top-left-radius: 0;
+                  border-top-right-radius: 5px;
+                }
+              }
+            }
+
+          }
+
+          &:hover {
+
+
+            > .dropdown {
+              opacity: 1;
+              transform: translateY(0px) rotateX(0deg);
+              visibility: visible;
+            }
+          }
+        }
+      }
+    }
+
+    .btns {
+      position: absolute;
+      right: 150px;
+      margin-top: 10px;
+      @include flexCenter();
+
+
+      >.free_btn {
+        position: relative;
+        padding: 8px 15px;
+        border-radius: 5px;
+        transition: 400ms;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        font-size: 14px;
+        font-family: "Myriad Pro Bold";
+        color: #000;
+
+        &:hover {
+          transform: translateY(-2px);
+          box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+        }
+
+        &:active {
+          transform: translateY(-1px);
+          box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+        }
+      }
+
+      > .logBtns {
+        position: relative;
+        margin-left: 30px;
+
+        > a {
+          //max-width:100px;
+          color: black;
+          padding: 8px 35px;
+          border-radius: 100px;
+          background: transparent;
+          outline: none;
+          font-size: 15px;
+          font-family: "Myriad Pro Bold";
+          border: 2px solid $button-primary-color;
+          transition: 500ms;
+
+          &.active {
+            background: $button-primary-color;
+          }
+        }
+
+        > .login {
+          //padding-right: 40px;
+
+          &:hover {
+            background: $button-primary-color;
+          }
+          &:hover + .signup {
+             background: transparent;
+           }
+        }
+
+        > .signup {
+          position: absolute;
+          white-space: nowrap;
+          top: -10px;
+          left: 75%;
+        }
+      }
+    }
+  }
+  > .content {
+    height: calc(100vh - 110px);
+    @include flexCenter();
+    justify-content: space-between;
+    overflow: hidden;
+    position: relative;
+
+    @media screen and (max-width: $break-hero-flex) {
+      flex-direction: column;
+      height: auto;
+      padding-bottom: 80px;
+    }
+
+    > .left {
+      width: 42%;
+      padding-left: 100px;
+
+      @media screen and (max-width: $break-hero-flex) {
+        width: 100vw;
+        padding-left: 0;
+        text-align: center;
+        padding-top: 80px;
+        margin-bottom: 40px;
+      }
+
+      @media screen and (max-width: $break-medium-fix1) {
+        zoom: 0.8;
+      }
+
+      //@media screen and (max-width: $break-hero) {
+      //  //flex-direction: column;
+      //  zoom: 0.6;
+      //}
+
+      > h2 {
+        font-size: 54px;
+        margin-bottom: 30px;
+      }
+
+      > p {
+        font-size: 24px;
+        line-height: 30px;
+        margin-bottom: 70px;
+
+        @media screen and (max-width: $break-hero-flex) {
+          margin-bottom: 0px;
+        }
+      }
+    }
+
+    > .right {
+      width: 45%;
+
+      @media screen and (max-width: $break-hero) {
+        //flex-direction: column;
+        zoom: 0.6;
+      }
+      @media screen and (max-width: $break-hero-flex) {
+        @include flexCenter();
+        width: 90%;
+        margin-bottom: 40px;
+      }
+
+      > img {
+        width: 86%;
+        max-width: 600px;
+
+        @media screen and (max-width: $break-hero-flex) {
+          min-width: 90vw;
+        }
+      }
+    }
+  }
+
+  > .aboutContent {
+    padding: 0 50px;
+
+    @media screen and (max-width: $break-hero-flex) {
+      padding: 0;
+    }
+
+    > img {
+      max-width: 1166px;
+      width: 90vw;
+      display: block;
+      margin: 0 auto;
+      padding: 30px 0;
+
+      @media screen and (max-width: $break-hero-flex) {
+        width: 100vw;
+      }
+    }
+
+    > .content {
+      max-width: 1066px;
+      padding: 30px 0 60px;
+      margin: 0 auto;
+
+      @media screen and (max-width: $break-medium-fix1) {
+        padding-left: 40px;
+        width: 80vw;
+      }
+
+      @media screen and (max-width: $break-hero-flex) {
+        padding-left: 10px;
+        padding-right: 20px;
+        width: 90vw;
+      }
+
+      @media screen and (max-width: $break-process-mobile1) {
+        padding-left: 0px;
+        padding-right: 0px;
+      }
+
+      > h2 {
+        color: $carousel-primary-color;
+        font-size: 34px;
+      }
+
+      > p {
+        margin-top: 20px;
+        font-size: 18px;
+        line-height: 27px;
+        text-align: justify;
+
+        @media screen and (max-width: $break-process-mobile1) {
+          font-size: 15px;
+          line-height: 21px;
+        }
+      }
+    }
+  }
+
+  > .classesContent {
+    padding: 0 50px 0 90px;
+
+    &.classes {
+      padding: 0;
+    }
+
+    @media screen and (max-width: $break-hero-flex) {
+      padding: 0 50px 0 50px;
+    }
+
+    @media screen and (max-width: $break-syllabus-more) {
+      padding: 0;
+    }
+
+    > .topContent {
+      margin: 200px auto;
+      max-width: 1010px;
+      background: #44b9c2;
+      height: 350px;
+      position: relative;
+      @include flexCenter();
+      justify-content: space-evenly;
+      padding: 0;
+      border-radius: 6px;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+
+      @media screen and (max-width: $break-medium-fix2) {
+        zoom: 0.8;
+      }
+
+      @media screen and (max-width: $break-hero) {
+        zoom: 0.7;
+      }
+
+      @media screen and (max-width: $break-hero-flex) {
+        flex-direction: column;
+        max-width: 450px;
+        height: auto;
+      }
+
+      @media screen and (max-width: $break-syllabus) {
+        zoom: 0.6;
+      }
+
+      @media screen and (max-width: $break-syllabus-more) {
+        width: 380px;
+      }
+
+      .creative {
+        min-width: 400px;
+        max-width: 450px;
+        height: 120%;
+        border-radius: 85px;
+        position: relative;
+
+        @media screen and (max-width: $break-hero-flex) {
+          max-width: 1750px;
+          width: 150%;
+          margin-top: 40px;
+        }
+
+        @media screen and (max-width: $break-syllabus-more) {
+          width: 120%;
+        }
+
+        > .headings {
+          position: absolute;
+          width: 100%;
+          top: 25%;
+          transform: translateY(-25%);
+
+          > h3 {
+            text-align: center;
+            font-size: 25px;
+            color: $carousel-primary-color;
+            font-family: "Myriad Pro Bold";
+          }
+        }
+
+        > img {
+          width: 100%;
+        }
+      }
+
+      .selections {
+        position: relative;
+
+        text-align: center;
+
+        @media screen and (max-width: $break-hero-flex) {
+          flex-direction: column;
+          max-width: 350px;
+          height: auto;
+          margin: 40px 20px;
+        }
+
+        > h3 {
+          color: #fff;
+          font-family: "Myriad Pro Regular";
+          font-weight: 300;
+        }
+
+        > .classBoard {
+          margin: 50px 0 80px;
+          display: flex;
+          color: #fff;
+
+          &.classes {
+            margin: 34px 0;
+          }
+
+          @media screen and (max-width: $break-syllabus-more) {
+            margin: 20px 0 40px;
+            flex-direction: column;
+          }
+
+          > .labels {
+            display: flex;
+            font-size: 24px;
+            margin-right: 20px;
+
+            @media screen and (max-width: $break-syllabus-more) {
+              margin-right: 0;
+              margin-top: 20px;
+            }
+
+            > label {
+              margin-right: 7px;
+              margin-top: 2px;
+            }
+          }
+        }
+
+        > input[type="text"] {
+          margin: 30px 0;
+          max-width: 480px;
+          min-width: 300px;
+          outline: none;
+          border: none;
+          padding: 5px 10px;
+          background: #fff;
+          border-radius: 4px;
+          font-size: 18px;
+        }
+        > input[type="text"]::placeholder {
+          color: rgba(143, 143, 143, 0.8);
+          font-size: 15px;
+          letter-spacing: 2px;
+        }
+
+        > input[type="submit"] {
+          border: none;
+          outline: none;
+          padding: 5px 20px;
+          border-radius: 4px;
+          font-size: 17px;
+          letter-spacing: 1px;
+          cursor: pointer;
+          background: $choose-secondary-color;
+          box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+          transition: 300ms;
+          font-family: "Myriad Pro Bold";
+
+          &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+          }
+
+          &:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+          }
+        }
+
+        select{
+          border: none;
+          outline: none;
+          border-bottom: 2px solid #fff;
+          color: #fff;
+          font-size: 21px;
+          text-align: center;
+
+          option {
+            background: #e7e7e7;
+            border-bottom: 1px solid;
+            color: rgba(0, 0, 0, 0.84);
+          }
+        }
+      }
+    }
+
+    > .bottomContent {
+      max-width: 800px;
+      //border: 1px solid;
+      margin: 0 auto;
+      padding-bottom: 80px;
+
+      @media screen and (max-width: $break-syllabus) {
+        zoom: 0.7;
+        padding: 45px 25px;
+      }
+
+      > h2 {
+        letter-spacing: 3px;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      > .syllabusList {
+
+        > li {
+          position: relative;
+          margin: 0 auto;
+          border-bottom: 1px solid #9c9c9c;
+          @include flexCenter();
+          align-items: flex-start;
+          justify-content: space-between;
+          max-width: 450px;
+          height: 45px;
+          overflow: hidden;
+          transition: 500ms;
+
+          &:hover {
+            border-bottom: 1px solid #44b9c2;
+            > p{
+              color: #44b9c2;
+            }
+
+            > i {
+              color: #ff5e4c;
+            }
+          }
+
+          > p {
+            padding-top: 10px;
+            color: #404040;
+            font-size: 22px;
+            font-family: "Myriad Pro Bold";
+            transition: 400ms;
+          }
+
+          > i {
+            margin-top: 10px;
+            color: #9c9c9c;
+            transition: 400ms;
+          }
+
+          > .syllabus-dropdown {
+            position: absolute;
+            top: 50px;
+            margin-left: 30px;
+
+            > li {
+              height: 40px;
+            }
+          }
+        }
+      }
+
+      &.classes {
+        max-width: 34440px;
+        width: 100vw;
+        @include flexCenter();
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 30px 0;
+        background: #7fcfd8;
+
+        @media screen and (max-width: $break-syllabus) {
+          zoom: 1;
+          padding: 30px 0;
+        }
+
+        > h3 {
+          font-size: 24px;
+          background: #007582;
+          font-family: "Myriad Pro Bold";
+          padding: 14px 58px;
+          border-radius: 4px;
+          color: #fff;
+
+          @media screen and (max-width: $break-grid-container) {
+            font-size: 20px;
+            padding: 14px 28px;
+          }
+
+          @media screen and (max-width: $break-choose) {
+            zoom: 0.8;
+          }
+        }
+
+        > h2 {
+          margin: 20px 0;
+          font-size: 25px;
+          letter-spacing: 5px;
+          color: #fff;
+
+          @media screen and (max-width: $break-choose) {
+            zoom: 0.8;
+          }
+        }
+
+        > .container {
+          max-width: 800px;
+          width: 90vw;
+          background: #fff;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-gap: 30px;
+          padding: 50px 40px;
+          border-radius: 8px;
+          justify-items: center;
+
+          @media screen and (max-width: $break-grid-container) {
+            grid-template-columns: 1fr;
+            max-width: 320px;
+          }
+
+          > .card {
+            height: 150px;
+            width: 250px;
+            border-radius: 15px;
+            @include flexCenter();
+            font-size: 29px;
+            color: #Fff;
+            font-family: "Myriad Pro Bold";
+            padding-left: 40px;
+
+            @media screen and (max-width: $break-process-mobile1) {
+              zoom: 0.8;
+            }
+          }
+
+          > .card1 {
+            background: url('../img/classes_page/yellow.png');
+            background-size: 100% 100%;
+          }
+
+          > .card2 {
+            background: url('../img/classes_page/green.png');
+            background-size: 100% 100%;
+          }
+
+          > .card3 {
+            background: url('../img/classes_page/red.png');
+            background-size: 100% 100%;
+          }
+
+          > .card4 {
+            background: url('../img/classes_page/purple.png');
+            background-size: 100% 100%;
+          }
+        }
+
+        > a {
+          margin-top: 30px;
+          color: #fff;
+          background: #007582;
+          font-size: 25px;
+          max-width: 250px;
+          padding: 14px 30px;
+          text-align: center;
+          border-radius: 6px;
+          font-family: "Myriad Pro Bold";
+
+          @media screen and (max-width: $break-choose) {
+            zoom: 0.8;
+          }
+        }
+      }
+    }
+  }
+
+  > .pricingContent {
+
+    > .topContent {
+      background: #dffaf7;
+
+      > .topWrapper {
+        @include flexCenter();
+        justify-content: space-evenly;
+        padding: 120px 40px 190px;
+        max-width: 1366px;
+        margin: 0 auto;
+
+        @media screen and (max-width: $break-medium-md) {
+          flex-direction: column-reverse;
+        }
+
+        @media screen and (max-width: $break-pricing-top) {
+          padding: 60px 20px;
+        }
+
+        > .left {
+
+          @media screen and (max-width: $break-pricing-top) {
+            zoom: 0.8;
+          }
+
+          @media screen and (max-width: $break-btn-zoom) {
+            zoom: 0.62;
+          }
+
+          > h1 {
+            display: inline-block;
+            padding: 8px 70px;
+            border: 1px solid #44b9c2;
+            border-radius: 1000px;
+            color: #44b9c2;
+            background: #fff;
+            margin-bottom: 20px;
+          }
+
+          > p {
+            font-size: 16px;
+            color: #44b9c2;
+            line-height: 47px;
+            > img {
+              width: 22px;
+            }
+          }
+        }
+
+        > img {
+          max-width: 500px;
+
+          @media screen and (max-width: $break-medium-md) {
+            margin-bottom: 80px;
+            width: 90vw;
+          }
+
+        }
+      }
+    }
+
+    > .bottomContent {
+
+      > .pricing-form {
+        max-width: 1366px;
+        margin: 0 auto;
+        padding: 0 40px;
+        position: relative;
+
+        &.none {
+          display: none;
+        }
+
+        > .cardContainer {
+          position: relative;
+          max-width: 1200px;
+          width: 90vw;
+          @include flexCenter();
+          justify-content: space-around;
+          padding: 40px 0;
+          background: #fff;
+          box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+          margin: -9% auto 0;
+          border-radius: 5px;
+
+          @media screen and (max-width: $break-process-mobile1) {
+            zoom: 0.8;
+          }
+
+          @media screen and (max-width: $break-process-mobile2) {
+            zoom: 0.8;
+            flex-direction: column;
+            max-width: 300px;
+          }
+
+          > .card {
+            height: 150px;
+            width: 170px;
+            padding: 20px;
+            border-radius: 3px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+
+            @media screen and (max-width: $break-process-mobile1) {
+              zoom: 0.8;
+            }
+
+            @media screen and (max-width: $break-process-mobile2) {
+              zoom: 1;
+              margin-bottom: 20px;
+            }
+
+            &:last-child {
+              @media screen and (max-width: $break-process-mobile2) {
+                margin-bottom: 0px;
+              }
+            }
+
+            &.left {
+              background: #dffaf7;
+            }
+
+            &.mid {
+              background: #fee97a;
+            }
+
+            &.right {
+              background: #abe2e6;
+            }
+
+            > img {
+              float: right;
+              width: 30px;
+            }
+
+            > p {
+              margin-top: 30%;
+              font-size: 18px;
+              letter-spacing: 1px;
+              color: #44b9c2;
+              font-family: "Myriad Pro Bold"  ;
+            }
+          }
+        }
+
+        > .class-board__container {
+          @include flexCenter();
+          justify-content: space-evenly;
+          padding: 80px 0;
+
+          @media screen and (max-width: $break-process-mobile2) {
+            flex-direction: column;
+            padding: 0;
+          }
+
+          > .class,
+          > .board{
+            @include flexCenter();
+            flex-direction: column;
+            align-items: flex-start;
+
+            @media screen and (max-width: $break-process-mobile1) {
+              zoom: 0.8;
+            }
+
+            @media screen and (max-width: $break-process-mobile2) {
+              zoom: 1;
+              margin-top: 40px;
+            }
+          }
+        }
+
+        > .subject {
+          @include flexCenter();
+          flex-direction: column;
+          align-items: flex-start;
+          margin: 0 auto;
+          max-width: 250px;
+
+          @media screen and (max-width: $break-process-mobile1) {
+            zoom: 0.8;
+          }
+
+          @media screen and (max-width: $break-process-mobile2) {
+            zoom: 1;
+            margin-top: 40px;
+            align-items: center;
+          }
+
+          > label {
+
+            @media screen and (max-width: $break-process-mobile2) {
+              width: 100%;
+            }
+          }
+        }
+
+        > a {
+          @include flexCenter();
+          max-width: 100px;
+          color: white;
+          background: #44b9c2;
+          box-shadow: 0 2px 3px rgba(0, 0, 0, 0.7);
+          padding: 10px 0;
+          padding-left: 30px;
+          padding-right: 15px;
+          border-radius: 100px;
+          margin: 80px auto;
+          transition: .4s;
+
+          &:hover {
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+            transform: translateY(-3px);
+          }
+
+          &:active {
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.6);
+            transform: translateY(-1px);
+          }
+        }
+
+        label {
+          color: #44b9c2;
+          font-size: 18px;
+          margin: 0 5px 6px;
+          letter-spacing: 1px;
+          font-family: "Myriad Pro Bold";
+        }
+
+        select,
+        input[type="text"]{
+          width: 250px;
+          border: 2px solid rgba(164, 164, 164, 0.61);
+          font-size: 20px;
+          border-radius: 8px;
+          color: #44b9c2;
+          padding: 5px 10px;
+          background: rgba(237, 237, 237, 0.3);
+        }
+      }
+
+      > .dynamic-content {
+        max-width: 1366px;
+        padding: 0 40px;
+        margin: 0 auto;
+        position: relative;
+
+        @media screen and (max-width: $break-process-mobile2) {
+          padding: 0 20px;
+        }
+
+        &.none {
+          display: none;
+        }
+
+        > .headingTabs {
+          @include flexCenter();
+          justify-content: flex-start;
+          position: absolute;
+          top: 0;
+          transform: translateY(-100%);
+          z-index: 1;
+
+          @media screen and (max-width: $break-process-mobile1) {
+            zoom: 0.8;
+          }
+
+          @media screen and (max-width: $break-process-mobile2) {
+            zoom: 0.7;
+          }
+
+          > p {
+            padding: 10px 40px;
+            letter-spacing: 1px;
+            font-size: 18px;
+            color: #fff;
+            border-top-left-radius: 6px;
+            border-top-right-radius: 6px;
+
+            @media screen and (max-width: $break-process-mobile2) {
+              padding: 10px;
+            }
+
+            &.class {
+              background: #f9bb15;
+            }
+
+            &.subject {
+              background: #57c5cd;
+            }
+
+            &:first-child {
+              margin-right: 20px;
+            }
+          }
+        }
+
+        > .description {
+
+
+          @media screen and (max-width: $break-nav) {
+            zoom: 0.8;
+          }
+
+
+          @media screen and (max-width: $break-hero-flex) {
+            zoom: 0.7;
+          }
+
+          @media screen and (max-width: $break-process-mobile2) {
+            zoom: 0.6;
+          }
+
+          > h2 {
+            text-align: center;
+            padding: 90px 0;
+            letter-spacing: 2px;
+            color: rgba(0,0,0,0.86);
+
+
+            @media screen and (max-width: $break-hero-flex) {
+              font-size: 32px;
+            }
+          }
+
+          > .line {
+            @include flexCenter();
+            justify-content: flex-start;
+            margin-bottom: 20px;
+
+            > img {
+              width: 19px;
+              margin-right: 50px;
+
+              @media screen and (max-width: $break-process-mobile2) {
+                margin-right: 20px;
+              }
+            }
+
+            > p {
+              letter-spacing: 2px;
+              font-size: 24px;
+            }
+          }
+        }
+
+        > .pricing-cards {
+          @include flexCenter();
+          justify-content: space-evenly;
+          margin: 130px 0;
+
+
+          @media screen and (max-width: $break-nav) {
+            zoom: 0.8;
+          }
+
+          @media screen and (max-width: $break-hero-flex) {
+            zoom: 0.7;
+          }
+
+          @media screen and (max-width: $break-process-mobile1) {
+            flex-direction: column;
+          }
+
+          > .card {
+            position: relative;
+            @include flexCenter();
+            flex-direction: column;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+            max-width: 390px;
+            width: 80vw;
+            background: #e2e2e2;
+            padding: 20px 0;
+
+            @media screen and (max-width: $break-process-mobile1) {
+              flex-direction: column;
+              margin-bottom: 60px;
+              width: 100vw;
+            }
+            > h3 {
+              margin: 20px 0;
+            }
+
+            > .line {
+              position: relative;
+              @include flexCenter();
+              width: 80%;
+              justify-content: flex-start;
+              height: 50px;
+
+              > img {
+                width: 28px;
+              }
+
+              > p {
+                margin-left: 30px;
+              }
+
+              > .ticks {
+                position: absolute;
+                top: 50%;
+                right: 5px;
+                transform: translateY(-50%);
+                width: 18px;
+              }
+            }
+
+            > p {
+              margin-top: 13px;
+              letter-spacing: 1px;
+              font-size: 14px;
+
+              @media screen and (max-width: $break-process-mobile2) {
+                max-width: 80%;
+                zoom: 0.9;
+              }
+
+              > dip {
+                font-size: 11px;
+                letter-spacing: 2px;
+              }
+
+              > strong {
+                font-size: 19px;
+                margin-right: 10px;
+                letter-spacing: 2px;
+                font-family: "Myriad Pro Bold";
+              }
+            }
+
+            > a {
+              font-family: "Myriad Pro Bold";
+              font-size: 25px;
+              margin-top: 20px;
+              background: #44b9c2;
+              padding: 3px 20px;
+              border-radius: 7px;
+              color: #fff;
+              transition: .4s;
+
+              &:hover {
+                background: #36787f;
+              }
+            }
+          }
+        }
+      }
+
+      .input--fields {
+        display: flex;
+        flex-direction: column;
+        max-width: 350px;
+        margin: 0 auto 30px;
+      }
+
+      .input--fields input[type="text"] {
+        width: 350px;
+      }
+
+      input[type="submit"] {
+        display: block;
+        max-width: 100px;
+        color: white;
+        background: #44b9c2;
+        outline: none;
+        border: none;
+        box-shadow: 0 2px 3px rgba(0, 0, 0, 0.7);
+        padding: 10px 30px;
+        border-radius: 100px;
+        margin: 80px auto;
+        transition: .4s;
+
+        &:hover {
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+          transform: translateY(-3px);
+        }
+
+        &:active {
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.6);
+          transform: translateY(-1px);
+        }
+      }
+    }
+  }
+}
+.navBg {
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: $nav-height;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+
+  @media screen and (max-width: $break-nav) {
+    display: none;
+  }
+
+  @media screen and (max-width: $break-medium-fix1) {
+    height: 90px;
+  }
+
+  &.about {
+    background: $hero-primary-color;
+  }
+}
+
+input:focus {
+  outline: none;
+}
+
+.inputNumber {
+  width: 450px;
+  position: relative;
+
+  &.desk {
+
+    @media screen and (max-width: $break-hero-flex) {
+      display: none;
+    }
+  }
+
+  &.mob {
+    display: none;
+
+    @media screen and (max-width: $break-hero-flex) {
+      display: block;
+    }
+
+    @media screen and (max-width: $break-btn-zoom) {
+      zoom: 0.6;
+    }
+  }
+
+
+  @media screen and (max-width: $break-medium-fix1) {
+    zoom: 0.8;
+  }
+}
+
+.intl-tel-input.allow-dropdown input, .intl-tel-input.allow-dropdown input[type=tel], .intl-tel-input.allow-dropdown input[type=text], .intl-tel-input.separate-dial-code input, .intl-tel-input.separate-dial-code input[type=tel], .intl-tel-input.separate-dial-code input[type=text] {
+  padding-left: 110px;
+  width: 450px;
+  font-size: 24px;
+  letter-spacing: 2px;
+  padding-top: 10px;
+  border-radius: 8px;
+  padding-bottom: 10px;
+  background: white;
+  border: 1px solid $button-primary-color;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
+  font-family: "Myriad Pro Bold";
+}
+.intl-tel-input .selected-flag {
+  padding-left: 25px;
+  padding-right: 25px;
+  //box-shadow: 1px 0px 2px rgba(0, 0, 0, 0.3);
+  border-right: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-input-placeholder { /* Edge */
+  font-family: "Myriad Pro Bold";
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  font-family: "Myriad Pro Bold";
+}
+
+::placeholder {
+  font-family: "Myriad Pro Light";
+}
+
+
+.primaryBtn {
+  position: absolute;
+  padding: 9px 23px;
+  font-size: 18px;
+  right: 10px;
+  font-family: "Myriad Pro Bold";
+  top: 50%;
+  border-radius: 7px;
+  overflow: hidden;
+  background: $button-primary-color;
+  background-image: url("../img/hero_section/button_bg.png");
+  transform: translateY(-50%);
+  //border: 1px solid $button-primary-color;
+  color: black;
+  z-index: 1;
+  transition: 300ms;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+
+  &:hover {
+    color: black;
+    transform: translate(3px, -50%);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+}

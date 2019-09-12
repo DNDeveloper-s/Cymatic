@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="76585f36-8743-4780-9dbd-eed59e6d050f" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="ProjectId" id="1PxeLf21HyY5nphEdqNLyFbxWiI" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/node_modules" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\HTML Projects\Projects Professional\Cymatic August\node_modules" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\HTML Projects\Projects Professional\Cymatic August\" />
+      <recent name="D:\HTML Projects\Projects Professional\Cymatic August\node_modules" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="76585f36-8743-4780-9dbd-eed59e6d050f" name="Default Changelist" comment="" />
+      <created>1566820119912</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1566820119912</updated>
+      <workItem from="1566820124539" duration="8278000" />
+      <workItem from="1566843203822" duration="2307000" />
+      <workItem from="1566913828732" duration="2825000" />
+      <workItem from="1566923305137" duration="5680000" />
+      <workItem from="1566967486029" duration="7630000" />
+      <workItem from="1566988883735" duration="601000" />
+      <workItem from="1566998046641" duration="8653000" />
+      <workItem from="1567009488032" duration="18000" />
+      <workItem from="1567085606799" duration="10372000" />
+      <workItem from="1567138429494" duration="23624000" />
+      <workItem from="1567274943950" duration="8225000" />
+      <workItem from="1567317305542" duration="12252000" />
+      <workItem from="1567346185133" duration="3127000" />
+      <workItem from="1567358379483" duration="6254000" />
+      <workItem from="1567407428582" duration="508000" />
+      <workItem from="1567497732675" duration="2057000" />
+      <workItem from="1567924786503" duration="16533000" />
+      <workItem from="1568019640239" duration="62000" />
+      <workItem from="1568022500685" duration="1168000" />
+      <workItem from="1568260214193" duration="5796000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>
