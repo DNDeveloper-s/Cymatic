@@ -144,6 +144,10 @@ a {
   cursor: pointer;
 }
 
+.mt-5 {
+  margin-top: 5px;
+}
+
 .footerSection {
   width: 100vw;
   padding: 120px 100px 250px;
@@ -741,6 +745,379 @@ a {
   cursor: pointer;
 }
 
+.mt-5 {
+  margin-top: 5px;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  z-index: 11;
+}
+header > .navBg {
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 110px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+@media screen and (max-width: 1023px) {
+  header > .navBg {
+    display: none;
+  }
+}
+@media screen and (max-width: 1260px) {
+  header > .navBg {
+    height: 90px;
+  }
+}
+header > .navBg.about {
+  background: #c6ebec;
+}
+header > .mobile {
+  position: relative;
+  height: 80px;
+  background: #fff;
+  display: none;
+  z-index: 9999999999999;
+}
+@media screen and (max-width: 1023px) {
+  header > .mobile {
+    display: block;
+  }
+}
+header > .mobile > .menu {
+  position: absolute;
+  top: 0;
+  left: 4vw;
+  height: 100%;
+}
+header > .mobile > .menu > i {
+  line-height: 80px;
+  font-size: 33px;
+}
+header > .mobile > .rightNav {
+  position: absolute;
+  right: 5vw;
+  height: 100%;
+  top: 0;
+}
+header > .mobile > .rightNav > .right {
+  line-height: 80px;
+  font-size: 16px;
+  font-family: "Myriad Pro Regular";
+  font-weight: 900;
+  padding: 9px 30px;
+  background: #b9e7e8;
+  border-radius: 150px;
+  color: rgba(78, 78, 78, 0.96);
+}
+header > .mobile > .rightNav > .right:hover {
+  background: white;
+  border: 1px solid #32ffec;
+}
+header > .mobile > .mobNav {
+  width: 100vw;
+  overflow-y: scroll;
+  position: absolute;
+  top: 100%;
+  transform: scale(1, 0);
+  opacity: 0;
+  background: #fff;
+  font-family: "Myriad Pro";
+  transition: all 300ms, height 300ms, opacity 100ms;
+  transform-origin: top;
+}
+header > .mobile > .mobNav.open {
+  transform: scale(1, 1);
+  opacity: 1;
+}
+header > .mobile > .mobNav > ul {
+  margin: 0;
+  font-size: 35px;
+}
+header > .mobile > .mobNav > ul > li {
+  position: relative;
+  color: #fff;
+  height: 100px;
+  line-height: 100px;
+  font-size: 15px;
+  transition: all 300ms;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+header > .mobile > .mobNav > ul > li > a {
+  color: #808080;
+  font-size: 25px;
+  display: block;
+  padding: 0 10vw;
+  background: transparent;
+  font-weight: 800;
+}
+header > .mobile > .mobNav > ul > li > span {
+  position: absolute;
+  top: 0;
+  line-height: 100px;
+  right: 10vw;
+}
+header > .mobile > .mobNav > ul > li > span.rot > i {
+  transform: rotateZ(180deg);
+}
+header > .mobile > .mobNav > ul > li > span.rotBack > i {
+  transform: rotateZ(0deg);
+}
+header > .mobile > .mobNav > ul > li > span > i {
+  transition: 300ms;
+  color: #808080;
+  font-size: 25px;
+}
+header > .mobile > .mobNav > ul > li > ul {
+  position: relative;
+  width: auto;
+  height: auto;
+  top: 0;
+  transform: scale(1, 1);
+  transform-origin: top;
+  transition: 300ms;
+  background: rgba(249, 249, 249, 0.98);
+}
+header > .mobile > .mobNav > ul > li > ul.none > li {
+  transform: scale(1);
+  opacity: 1;
+  height: 100px;
+}
+header > .mobile > .mobNav > ul > li > ul > li {
+  height: 0;
+  padding: 0 100px;
+  opacity: 0;
+  transform: scale(0);
+  color: #fff;
+  font-size: 25px;
+  transition: height 300ms, opacity 100ms, color 300ms;
+}
+header > .mobile > .mobNav > ul > li > ul > li > a {
+  color: #808080;
+}
+header > .nav {
+  width: 100%;
+  position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
+  top: 0;
+  left: 0;
+  z-index: 10000000000000002000;
+  height: 110px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
+}
+@media screen and (max-width: 1023px) {
+  header > .nav {
+    display: none;
+  }
+}
+@media screen and (max-width: 1260px) {
+  header > .nav {
+    zoom: 0.8;
+  }
+}
+header > .nav > .logo {
+  margin-left: 100px;
+  position: relative;
+  width: 130px;
+  height: 160px;
+  z-index: 1;
+}
+header > .nav > .logo > .rounded {
+  width: 130px;
+  height: 170%;
+  position: absolute;
+  top: -60px;
+}
+header > .nav > .logo > .mainLogo {
+  position: absolute;
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 60%;
+}
+header > .nav > .logo > .mainLogo > img {
+  width: 71px;
+}
+header > .nav > nav {
+  margin-top: 20px;
+  margin-left: 20px;
+  width: 40%;
+}
+header > .nav > nav > ul {
+  margin: 0;
+  display: flex;
+}
+header > .nav > nav > ul > li {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 10px;
+  margin: 10px;
+  perspective: 1000px;
+}
+header > .nav > nav > ul > li > a {
+  color: black;
+  text-transform: uppercase;
+  white-space: nowrap;
+  font-size: 15px;
+  font-family: "Myriad Pro Bold";
+}
+header > .nav > nav > ul > li > .dropdown {
+  position: absolute;
+  top: calc(100%);
+  left: 0;
+  width: 250px;
+  background: rgba(255, 255, 255, 0.83);
+  border-radius: 5px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 100ms ease-in-out 100ms, transform 280ms;
+  transform-origin: top;
+  transform: translateY(10px) rotateX(-90deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header > .nav > nav > ul > li > .dropdown > .caret {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  top: -7px;
+  left: 20px;
+  background: #c6ebec;
+  transform: rotateZ(45deg);
+  z-index: -1;
+}
+header > .nav > nav > ul > li > .dropdown > .leftContent,
+header > .nav > nav > ul > li > .dropdown > .rightContent {
+  width: 100%;
+  height: 100%;
+}
+header > .nav > nav > ul > li > .dropdown > .leftContent > ul .dropDown-item,
+header > .nav > nav > ul > li > .dropdown > .rightContent > ul .dropDown-item {
+  margin: 5px 3px;
+}
+header > .nav > nav > ul > li > .dropdown > .leftContent > ul .dropDown-item > a,
+header > .nav > nav > ul > li > .dropdown > .rightContent > ul .dropDown-item > a {
+  display: block;
+  padding: 0 35px;
+  height: 40px;
+  line-height: 40px;
+  color: black;
+  background: #fedf42;
+  transition: 300ms;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+}
+header > .nav > nav > ul > li > .dropdown > .leftContent > ul .dropDown-item > a:hover,
+header > .nav > nav > ul > li > .dropdown > .rightContent > ul .dropDown-item > a:hover {
+  background: rgba(255, 223, 67, 0.6);
+}
+header > .nav > nav > ul > li > .dropdown > .leftContent > ul li.headLi,
+header > .nav > nav > ul > li > .dropdown > .rightContent > ul li.headLi {
+  height: 40px;
+  line-height: 40px;
+  font-size: 16px;
+  padding: 0 35px;
+  background: #c6ebec;
+  font-family: "Myriad Pro Bold";
+  border-radius: 0px;
+  border-top-left-radius: 5px;
+}
+header > .nav > nav > ul > li > .dropdown > .leftContent > ul .dropIt > ul,
+header > .nav > nav > ul > li > .dropdown > .leftContent > ul .dropItHead > ul,
+header > .nav > nav > ul > li > .dropdown > .rightContent > ul .dropIt > ul,
+header > .nav > nav > ul > li > .dropdown > .rightContent > ul .dropItHead > ul {
+  height: 0;
+  overflow: hidden;
+  transition: 300ms;
+}
+header > .nav > nav > ul > li > .dropdown > .rightContent {
+  width: 70%;
+  height: 100%;
+  box-shadow: -2px 0px 2px rgba(0, 0, 0, 0.3);
+}
+header > .nav > nav > ul > li > .dropdown > .rightContent > ul > li {
+  background: #fff;
+}
+header > .nav > nav > ul > li > .dropdown > .rightContent > ul > li.headLi {
+  border-top-left-radius: 0;
+  border-top-right-radius: 5px;
+}
+header > .nav > nav > ul > li:hover > .dropdown {
+  opacity: 1;
+  transform: translateY(0px) rotateX(0deg);
+  visibility: visible;
+}
+header > .nav .btns {
+  position: absolute;
+  right: 150px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header > .nav .btns > .free_btn {
+  position: relative;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: 400ms;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  font-size: 14px;
+  font-family: "Myriad Pro Bold";
+  color: #000;
+}
+header > .nav .btns > .free_btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+}
+header > .nav .btns > .free_btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+}
+header > .nav .btns > .logBtns {
+  position: relative;
+  margin-left: 30px;
+}
+header > .nav .btns > .logBtns > a {
+  color: black;
+  padding: 8px 35px;
+  border-radius: 100px;
+  background: transparent;
+  outline: none;
+  font-size: 15px;
+  font-family: "Myriad Pro Bold";
+  border: 2px solid #fedf42;
+  transition: 500ms;
+}
+header > .nav .btns > .logBtns > a.active {
+  background: #fedf42;
+}
+header > .nav .btns > .logBtns > .login:hover {
+  background: #fedf42;
+}
+header > .nav .btns > .logBtns > .login:hover + .signup {
+  background: transparent;
+}
+header > .nav .btns > .logBtns > .signup {
+  position: absolute;
+  white-space: nowrap;
+  top: -10px;
+  left: 75%;
+}
+
 .hero_Section {
   width: 100vw;
   background: #c6ebec;
@@ -758,6 +1135,7 @@ a {
 .hero_Section.about {
   background: #fff;
   height: auto;
+  padding-top: 100px;
 }
 @media screen and (max-width: 810px) {
   .hero_Section {
@@ -809,6 +1187,10 @@ ul {
   display: block;
   margin: 0 auto;
 }
+.wrapper.home {
+  display: flex;
+  align-items: center;
+}
 .wrapper.about {
   height: auto;
 }
@@ -819,333 +1201,6 @@ ul {
   .wrapper {
     height: auto;
   }
-}
-.wrapper > .mobile {
-  position: relative;
-  height: 80px;
-  background: #fff;
-  display: none;
-  z-index: 9999999999999;
-}
-@media screen and (max-width: 1023px) {
-  .wrapper > .mobile {
-    display: block;
-  }
-}
-.wrapper > .mobile > .menu {
-  position: absolute;
-  top: 0;
-  left: 4vw;
-  height: 100%;
-}
-.wrapper > .mobile > .menu > i {
-  line-height: 80px;
-  font-size: 33px;
-}
-.wrapper > .mobile > .rightNav {
-  position: absolute;
-  right: 5vw;
-  height: 100%;
-  top: 0;
-}
-.wrapper > .mobile > .rightNav > .right {
-  line-height: 80px;
-  font-size: 16px;
-  font-family: "Myriad Pro Regular";
-  font-weight: 900;
-  padding: 9px 30px;
-  background: #b9e7e8;
-  border-radius: 150px;
-  color: rgba(78, 78, 78, 0.96);
-}
-.wrapper > .mobile > .rightNav > .right:hover {
-  background: white;
-  border: 1px solid #32ffec;
-}
-.wrapper > .mobile > .mobNav {
-  width: 100vw;
-  overflow-y: scroll;
-  position: absolute;
-  top: 100%;
-  transform: scale(1, 0);
-  opacity: 0;
-  background: #fff;
-  font-family: "Myriad Pro";
-  transition: all 300ms, height 300ms, opacity 100ms;
-  transform-origin: top;
-}
-.wrapper > .mobile > .mobNav.open {
-  transform: scale(1, 1);
-  opacity: 1;
-}
-.wrapper > .mobile > .mobNav > ul {
-  margin: 0;
-  font-size: 35px;
-}
-.wrapper > .mobile > .mobNav > ul > li {
-  position: relative;
-  color: #fff;
-  height: 100px;
-  line-height: 100px;
-  font-size: 15px;
-  transition: all 300ms;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-}
-.wrapper > .mobile > .mobNav > ul > li > a {
-  color: #808080;
-  font-size: 25px;
-  display: block;
-  padding: 0 10vw;
-  background: transparent;
-  font-weight: 800;
-}
-.wrapper > .mobile > .mobNav > ul > li > span {
-  position: absolute;
-  top: 0;
-  line-height: 100px;
-  right: 10vw;
-}
-.wrapper > .mobile > .mobNav > ul > li > span.rot > i {
-  transform: rotateZ(180deg);
-}
-.wrapper > .mobile > .mobNav > ul > li > span.rotBack > i {
-  transform: rotateZ(0deg);
-}
-.wrapper > .mobile > .mobNav > ul > li > span > i {
-  transition: 300ms;
-  color: #808080;
-  font-size: 25px;
-}
-.wrapper > .mobile > .mobNav > ul > li > ul {
-  position: relative;
-  width: auto;
-  height: auto;
-  top: 0;
-  transform: scale(1, 1);
-  transform-origin: top;
-  transition: 300ms;
-  background: rgba(249, 249, 249, 0.98);
-}
-.wrapper > .mobile > .mobNav > ul > li > ul.none > li {
-  transform: scale(1);
-  opacity: 1;
-  height: 100px;
-}
-.wrapper > .mobile > .mobNav > ul > li > ul > li {
-  height: 0;
-  padding: 0 100px;
-  opacity: 0;
-  transform: scale(0);
-  color: #fff;
-  font-size: 25px;
-  transition: height 300ms, opacity 100ms, color 300ms;
-}
-.wrapper > .mobile > .mobNav > ul > li > ul > li > a {
-  color: #808080;
-}
-.wrapper > .nav {
-  width: 100%;
-  position: relative;
-  max-width: 1440px;
-  margin: 0 auto;
-  top: 0;
-  left: 0;
-  z-index: 10000000000000002000;
-  height: 110px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  justify-content: flex-start;
-}
-@media screen and (max-width: 1023px) {
-  .wrapper > .nav {
-    display: none;
-  }
-}
-@media screen and (max-width: 1260px) {
-  .wrapper > .nav {
-    zoom: 0.8;
-  }
-}
-.wrapper > .nav > .logo {
-  margin-left: 100px;
-  position: relative;
-  width: 130px;
-  height: 160px;
-  z-index: 1;
-}
-.wrapper > .nav > .logo > .rounded {
-  width: 130px;
-  height: 170%;
-  position: absolute;
-  top: -60px;
-}
-.wrapper > .nav > .logo > .mainLogo {
-  position: absolute;
-  z-index: 1;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  top: 60%;
-}
-.wrapper > .nav > .logo > .mainLogo > img {
-  width: 71px;
-}
-.wrapper > .nav > nav {
-  margin-top: 20px;
-  margin-left: 20px;
-  width: 40%;
-}
-.wrapper > .nav > nav > ul {
-  margin: 0;
-  display: flex;
-}
-.wrapper > .nav > nav > ul > li {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 30px 10px;
-  margin: 10px;
-  perspective: 1000px;
-}
-.wrapper > .nav > nav > ul > li > a {
-  color: black;
-  text-transform: uppercase;
-  white-space: nowrap;
-  font-size: 15px;
-  font-family: "Myriad Pro Bold";
-}
-.wrapper > .nav > nav > ul > li > .dropdown {
-  display: block;
-  position: absolute;
-  top: calc(100%);
-  left: 0;
-  width: 500px;
-  height: 400px;
-  background: rgba(255, 255, 255, 0.83);
-  border-radius: 5px;
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 100ms ease-in-out 100ms, transform 280ms;
-  transform-origin: top;
-  transform: translateY(10px) rotateX(-90deg);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.wrapper > .nav > nav > ul > li > .dropdown > .caret {
-  position: absolute;
-  width: 14px;
-  height: 14px;
-  top: -7px;
-  left: 20px;
-  background: #c6ebec;
-  transform: rotateZ(45deg);
-  z-index: -1;
-}
-.wrapper > .nav > nav > ul > li > .dropdown > .leftContent,
-.wrapper > .nav > nav > ul > li > .dropdown > .rightContent {
-  width: 30%;
-  height: 100%;
-}
-.wrapper > .nav > nav > ul > li > .dropdown > .leftContent > ul > li,
-.wrapper > .nav > nav > ul > li > .dropdown > .rightContent > ul > li {
-  margin: 5px 3px;
-  padding: 10px 35px;
-  background: #fedf42;
-  border-radius: 8px;
-  transition: 300ms;
-  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
-}
-.wrapper > .nav > nav > ul > li > .dropdown > .leftContent > ul > li:hover,
-.wrapper > .nav > nav > ul > li > .dropdown > .rightContent > ul > li:hover {
-  background: rgba(255, 223, 67, 0.6);
-}
-.wrapper > .nav > nav > ul > li > .dropdown > .leftContent > ul > li.headLi,
-.wrapper > .nav > nav > ul > li > .dropdown > .rightContent > ul > li.headLi {
-  margin: 0;
-  font-size: 24px;
-  padding: 14px auto;
-  background: #c6ebec;
-  font-family: "Myriad Pro Bold";
-  border-radius: 0px;
-  border-top-left-radius: 5px;
-}
-.wrapper > .nav > nav > ul > li > .dropdown > .rightContent {
-  width: 70%;
-  height: 100%;
-  box-shadow: -2px 0px 2px rgba(0, 0, 0, 0.3);
-}
-.wrapper > .nav > nav > ul > li > .dropdown > .rightContent > ul > li {
-  background: #fff;
-}
-.wrapper > .nav > nav > ul > li > .dropdown > .rightContent > ul > li.headLi {
-  border-top-left-radius: 0;
-  border-top-right-radius: 5px;
-}
-.wrapper > .nav > nav > ul > li:hover > .dropdown {
-  opacity: 1;
-  transform: translateY(0px) rotateX(0deg);
-  visibility: visible;
-}
-.wrapper > .nav .btns {
-  position: absolute;
-  right: 150px;
-  margin-top: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.wrapper > .nav .btns > .free_btn {
-  position: relative;
-  padding: 8px 15px;
-  border-radius: 5px;
-  transition: 400ms;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  font-size: 14px;
-  font-family: "Myriad Pro Bold";
-  color: #000;
-}
-.wrapper > .nav .btns > .free_btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
-}
-.wrapper > .nav .btns > .free_btn:active {
-  transform: translateY(-1px);
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
-}
-.wrapper > .nav .btns > .logBtns {
-  position: relative;
-  margin-left: 30px;
-}
-.wrapper > .nav .btns > .logBtns > a {
-  color: black;
-  padding: 8px 35px;
-  border-radius: 100px;
-  background: transparent;
-  outline: none;
-  font-size: 15px;
-  font-family: "Myriad Pro Bold";
-  border: 2px solid #fedf42;
-  transition: 500ms;
-}
-.wrapper > .nav .btns > .logBtns > a.active {
-  background: #fedf42;
-}
-.wrapper > .nav .btns > .logBtns > .login:hover {
-  background: #fedf42;
-}
-.wrapper > .nav .btns > .logBtns > .login:hover + .signup {
-  background: transparent;
-}
-.wrapper > .nav .btns > .logBtns > .signup {
-  position: absolute;
-  white-space: nowrap;
-  top: -10px;
-  left: 75%;
 }
 .wrapper > .content {
   height: calc(100vh - 110px);
@@ -2109,28 +2164,6 @@ ul {
   transform: translateY(-1px);
 }
 
-.navBg {
-  width: 100vw;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 110px;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-}
-@media screen and (max-width: 1023px) {
-  .navBg {
-    display: none;
-  }
-}
-@media screen and (max-width: 1260px) {
-  .navBg {
-    height: 90px;
-  }
-}
-.navBg.about {
-  background: #c6ebec;
-}
-
 input:focus {
   outline: none;
 }
@@ -2219,6 +2252,10 @@ input:focus {
   color: black;
   transform: translate(3px, -50%);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.signup.signUpBtn {
+  text-decoration: none !important;
 }
 
 .processSection {
