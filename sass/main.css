@@ -1193,6 +1193,7 @@ ul {
 }
 .wrapper.about {
   height: auto;
+  margin-top: 10px;
 }
 .wrapper.classes {
   max-width: 33340px;
