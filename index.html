@@ -448,6 +448,7 @@
         <div class="owl-carousel owl-theme">
             <div class="item"><img class="quotes" src="./img/carousel_section/quotes.png" alt="">
                 <img class="blue" src="./img/carousel_section/blue_circle.png" alt="">
+                <img class="dp" src="./img/carousel_section/EVA%20Srivastava.jpg" alt="">
                 <p>The management is understanding and ensures that every doubt is cleared, questions can be asked whenever one arises, there are no barriers because every perspective is respected by Cymatic. </p>
                 <div class="name">
                     <h2>Gaurav Shah</h2>
@@ -456,6 +457,7 @@
             </div>
             <div class="item"><img class="quotes" src="./img/carousel_section/quotes.png" alt="">
                 <img class="blue" src="./img/carousel_section/blue_circle.png" alt="">
+                <img class="dp" src="./img/carousel_section/EVA%20Srivastava.jpg" alt="">
                 <p> An innovative effort to dig dimonds from ancient traditions of education. God bless you all.</p>
                 <div class="name">
                     <h2>Kailash Bihari Singh</h2>
@@ -464,6 +466,7 @@
             </div>
             <div class="item"><img class="quotes" src="./img/carousel_section/quotes.png" alt="">
                 <img class="blue" src="./img/carousel_section/blue_circle.png" alt="">
+                <img class="dp" src="./img/carousel_section/EVA%20Srivastava.jpg" alt="">
                 <p>Education plays a pivotal role in one’s life and to help each student in achieving a goal, there needs to be a mentor or a friend, and this is the field where Cymatic ensures that every student is having a clear mind with no hazy thoughts. Learning is a fun here.</p>
                 <div class="name">
                     <h2>KPS Keshri</h2>
@@ -472,6 +475,7 @@
             </div>
             <div class="item"><img class="quotes" src="./img/carousel_section/quotes.png" alt="">
                 <img class="blue" src="./img/carousel_section/blue_circle.png" alt="">
+                <img class="dp" src="./img/carousel_section/EVA%20Srivastava.jpg" alt="">
                 <p>Kaushik and team have taken on a challenge which can solve one of the greatest problems of our time - how to give hundreds of millions meaning to their life and a path to sustain able Livelihoods. Their approach to democratizing education through judicious technology deployment is a worthy effort. I applaud them and wish them well </p>
                 <div class="name">
                     <h2>Ganesh Natarajan</h2>
@@ -480,6 +484,7 @@
             </div>
             <div class="item"><img class="quotes" src="./img/carousel_section/quotes.png" alt="">
                 <img class="blue" src="./img/carousel_section/blue_circle.png" alt="">
+                <img class="dp" src="./img/carousel_section/EVA%20Srivastava.jpg" alt="">
                 <p>I always advocated the convergence of profit and non profit world and Cymatic made this happen! I hope many IITians, NITians get inspired by people like Kaishik and bring the change the want to see!</p>
                 <div class="name">
                     <h2>Abhishek Ranjan</h2>
@@ -594,9 +599,11 @@
     $('document').ready(function () {
         $('.owl-carousel').owlCarousel({
             stagePadding: 10,
-            loop: false,
+            loop: true,
+            nav:true,
+            autoplay: true,
+            autoplayTimeout: 3000,
             margin: 20,
-            nav: false,
             responsiveClass: true,
             responsive: {
                 // breakpoint from 0 up
@@ -617,7 +624,7 @@
                 }
             }
         })
-    })
+    });
 
     $('.navClass').click(function () {
         let curNav = this;

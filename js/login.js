@@ -13,6 +13,7 @@ let loginFn = function() {
     setTimeout(() => {
         closeL = document.querySelectorAll('.closeL');
         login.classList.add('open');
+        signup.classList.remove('open');
         loginCli.classList.add('active');
         signupCli.classList.remove('active');
 
