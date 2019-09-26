@@ -1593,6 +1593,10 @@ ul {
   justify-content: flex-start;
   padding: 30px 0;
   background: #7fcfd8;
+  display: none;
+}
+.wrapper > .classesContent > .bottomContent.classes.active {
+  display: flex;
 }
 @media screen and (max-width: 448px) {
   .wrapper > .classesContent > .bottomContent.classes {

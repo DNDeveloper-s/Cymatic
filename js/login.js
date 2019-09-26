@@ -8,53 +8,60 @@ let signupCli = document.querySelector('.signup.signUpBtn');
 let closeL;
 console.log(body);
 
-let loginFn = function() {
+loginCli.addEventListener('click', openLogin);
+signupCli.addEventListener('click', openSignup);
 
-    setTimeout(() => {
-        closeL = document.querySelectorAll('.closeL');
-        login.classList.add('open');
-        signup.classList.remove('open');
-        loginCli.classList.add('active');
-        signupCli.classList.remove('active');
+let logmod = document.querySelector('#logIn');
 
-        closeL.forEach(cur => {
-            cur.addEventListener('click', function() {
-                cur.parentElement.classList.remove('open');
-                loginCli.classList.remove('active');
-                signupCli.classList.add('active');
-            });
-        })
-
-    },400);
+function openLogin() {
+    logmod.style.display = 'block';
 }
 
-let signupFn = function() {
+let logInMod = document.getElementById('logIn');
+let signUpMod = document.getElementById('signUp');
 
-    setTimeout(() => {
-        closeL = document.querySelectorAll('.closeL');
-        login.classList.remove('open');
-        signup.classList.add('open');
-        loginCli.classList.remove('active');
-        signupCli.classList.add('active');
-
-        closeL.forEach(cur => {
-            cur.addEventListener('click', function() {
-                cur.parentElement.classList.remove('open');
-                loginCli.classList.remove('active');
-                signupCli.classList.add('active');
-            });
-        })
-
-    },400);
+window.onclick = function(event) {
+    if (event.target == logInMod) {
+        logInMod.style.display = "none";
+    }
+    if (event.target == signUpMod) {
+        signUpMod.style.display = "none";
+    }
 }
 
-loginBtn.forEach(cur => {
-    cur.addEventListener('click', loginFn);
-})
+let signmod = document.querySelector('#signUp');
 
-signUpBtn.forEach(cur => {
-    cur.addEventListener('click', signupFn);
-})
+function openSignup() {
+    signmod.style.display = 'block';
+}
+
+// let signupFn = function() {
+//
+//     setTimeout(() => {
+//         closeL = document.querySelectorAll('.closeL');
+//         login.classList.remove('open');
+//         signup.classList.add('open');
+//         loginCli.classList.remove('active');
+//         signupCli.classList.add('active');
+//
+//         closeL.forEach(cur => {
+//             cur.addEventListener('click', function() {
+//                 cur.parentElement.classList.remove('open');
+//                 loginCli.classList.remove('active');
+//                 signupCli.classList.add('active');
+//             });
+//         })
+//
+//     },400);
+// }
+
+// loginBtn.forEach(cur => {
+//     cur.addEventListener('click', loginFn);
+// })
+//
+// signUpBtn.forEach(cur => {
+//     cur.addEventListener('click', signupFn);
+// })
 
 
 // Dropdown Js
