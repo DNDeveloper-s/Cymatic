@@ -3235,6 +3235,189 @@ input:focus {
   text-decoration: underline;
 }
 
+.hero_Section.dashboard {
+  margin-top: 110px;
+}
+.hero_Section.dashboard > .wrapper {
+  height: auto;
+  border-bottom: 60px solid rgba(0, 0, 0, 0.8);
+  box-sizing: content-box;
+}
+.hero_Section.dashboard > .wrapper > .dash__fav {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 100px;
+  background: rgba(0, 0, 0, 0.8);
+}
+.hero_Section.dashboard > .wrapper > .dash__fav > img {
+  height: 30px;
+}
+.hero_Section.dashboard > .wrapper > .dashboard__container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.hero_Section.dashboard > .wrapper > .dashboard__container > .left {
+  background: rgba(0, 0, 0, 0.8);
+  width: 90vw;
+  max-width: 300px;
+  min-width: 220px;
+  color: #fff;
+  letter-spacing: 1px;
+}
+.hero_Section.dashboard > .wrapper > .dashboard__container > .left > .break {
+  border-top: 1px solid #fff;
+}
+.hero_Section.dashboard > .wrapper > .dashboard__container > .left > .person {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 30px 0;
+}
+.hero_Section.dashboard > .wrapper > .dashboard__container > .left > .person > img {
+  width: 100px;
+  height: 100px;
+  border-radius: 300px;
+  margin-bottom: 20px;
+}
+.hero_Section.dashboard > .wrapper > .dashboard__container > .left > .subjects > .content-head {
+  margin-bottom: 10px;
+}
+.hero_Section.dashboard > .wrapper > .dashboard__container > .left > .subjects > .content-child {
+  padding-left: 100px;
+}
+.hero_Section.dashboard > .wrapper > .dashboard__container > .left > .subjects > .content-child > p {
+  margin: 10px 0;
+}
+.hero_Section.dashboard > .wrapper > .dashboard__container > .left .content-head {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 8px 0;
+  padding: 8px 0;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.hero_Section.dashboard > .wrapper > .dashboard__container > .left .content-head:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+.hero_Section.dashboard > .wrapper > .dashboard__container > .left .content-head.active {
+  background: rgba(0, 0, 0, 0.9);
+}
+.hero_Section.dashboard > .wrapper > .dashboard__container > .left .content-head.active::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 100%;
+  background: black;
+  clip-path: polygon(36% 28%, 100% 50%, 36% 70%, 36% 100%, 0 100%, 0 0, 36% 0);
+}
+.hero_Section.dashboard > .wrapper > .dashboard__container > .left .content-head > img {
+  width: 20px;
+  margin: 0 30px;
+}
+.hero_Section.dashboard > .wrapper > .dashboard__container > .left .content-head > h3 {
+  font-weight: 500;
+}
+.hero_Section.dashboard > .wrapper > .dashboard__container > .right {
+  width: 100%;
+  background: #fff;
+}
+.hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myClasses,
+.hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myAssessment,
+.hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myDoubts,
+.hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myAssignment,
+.hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myPreviousLectures {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myClasses > h2,
+.hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myAssessment > h2,
+.hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myDoubts > h2,
+.hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myAssignment > h2,
+.hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myPreviousLectures > h2 {
+  position: relative;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+.hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myClasses > h2::before,
+.hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myAssessment > h2::before,
+.hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myDoubts > h2::before,
+.hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myAssignment > h2::before,
+.hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myPreviousLectures > h2::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 130%;
+  transform: translateX(-50%);
+  height: 4px;
+  width: 60px;
+  background: #2797A7;
+}
+.hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myClasses > .grid__Container,
+.hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myAssessment > .grid__Container,
+.hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myDoubts > .grid__Container,
+.hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myAssignment > .grid__Container,
+.hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myPreviousLectures > .grid__Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-items: flex-start;
+  max-width: 200px;
+}
+.hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myClasses > .grid__Container > .box,
+.hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myAssessment > .grid__Container > .box,
+.hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myDoubts > .grid__Container > .box,
+.hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myAssignment > .grid__Container > .box,
+.hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myPreviousLectures > .grid__Container > .box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 20px;
+  text-align: center;
+}
+.hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myClasses > .grid__Container > .box > img,
+.hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myAssessment > .grid__Container > .box > img,
+.hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myDoubts > .grid__Container > .box > img,
+.hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myAssignment > .grid__Container > .box > img,
+.hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myPreviousLectures > .grid__Container > .box > img {
+  max-width: 240px;
+}
+.hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myClasses > .grid__Container > .box > p,
+.hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myAssessment > .grid__Container > .box > p,
+.hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myDoubts > .grid__Container > .box > p,
+.hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myAssignment > .grid__Container > .box > p,
+.hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myPreviousLectures > .grid__Container > .box > p {
+  margin-top: 10px;
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 25px;
+}
+.hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myDoubts > .grid__Container > .box {
+  margin: 0 50px;
+}
+
+#calendar {
+  padding: 50px;
+}
+
 @keyframes dotAnim {
   0% {
     transform: rotate(0deg) scale(0.8);

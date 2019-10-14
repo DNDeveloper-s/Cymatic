@@ -1,0 +1,20 @@
+{
+	"myClasses": {
+		"html": "<div class=\"myClasses\"> <h2>My Class</h2> <div class=\"grid__Container\"> <div class=\"box\"> <img src=\"./img/dashboard_section/live_classes.png\" alt=\"\"> <p>You can Join Classes here!</p></div><div class=\"box\"> <img src=\"./img/dashboard_section/recording-videos.png\" alt=\"\"> <p>Watch your previous recorded video</p></div><div class=\"box\"> <img src=\"./img/dashboard_section/quiz.png\" alt=\"\"> <p>Check your IQ by attempting the Quiz!</p></div></div></div>"
+	},
+	"myAssessment": {
+		"html": " <div class=\"myAssessment\"> <h2>Assessment</h2> <div class=\"grid__Container\"> <div class=\"box\"> <img src=\"./img/dashboard_section/tests.png\" alt=\"\"> <p>Your Test begin here!</p></div><div class=\"box\"> <img src=\"./img/dashboard_section/result.png\" alt=\"\"> <p>See your Results here!</p></div><div class=\"box\"> <img src=\"./img/dashboard_section/quiz.png\" alt=\"\"> <p>Check your IQ by attempting the Quiz!</p></div></div></div>"
+	},
+	"myDoubts": {
+		"html": " <div class=\"myDoubts\"> <h2>Doubt</h2> <div class=\"grid__Container\"> <div class=\"box\"> <img src=\"./img/dashboard_section/askDoubts.png\" alt=\"\"> <p>Ask your Doubts 24*7 here!</p></div><div class=\"box\"> <img src=\"./img/dashboard_section/solution.png\" alt=\"\"> <p>See your Solution here!</p></div></div></div>"
+	},
+	"myAssignment": {
+		"html": " <div class=\"myAssignment\"> <h2>Assignment</h2> <div class=\"grid__Container\"> <div class=\"box\"> <img src=\"./img/dashboard_section/assignment.png\" alt=\"\"> <p>Complete your Assignment here!</p></div></div></div>"
+	},
+	"myPreviousLectures": {
+		"html": " <div class=\"myPreviousLectures\"> <h2>Previous Lectures</h2> <div class=\"grid__Container\"> <div class=\"box\"> <img src=\"./img/dashboard_section/previousLectures.png\" alt=\"\"> <p>Watch your Previous Lecture here!</p></div></div></div>"
+	},
+	"myCalendar": {
+		"html": "<div id='calendar'></div>"
+	}
+}

@@ -1,0 +1,172 @@
+.hero_Section.dashboard {
+  margin-top: 110px;
+
+  > .wrapper {
+    height: auto;
+    border-bottom: 60px solid rgba(0,0,0,0.8);
+    box-sizing: content-box;
+    > .dash__fav {
+      width: 100%;
+      height: 60px;
+      @include flexCenter();
+      justify-content: flex-end;
+      padding-right: 100px;
+      background: rgba(0,0,0,0.8);
+      > img {
+        height: 30px;
+      }
+    }
+
+    > .dashboard__container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+
+      > .left {
+        background: rgba(0,0,0,0.8);
+        width: 90vw;
+        //width: 85px;
+        max-width: 300px;
+        min-width: 220px;
+        color: #fff;
+        letter-spacing: 1px;
+
+        > .break {
+          border-top: 1px solid #fff;
+        }
+
+        > .person {
+          @include flexCenter();
+          flex-direction: column;
+          margin: 30px 0;
+          > img {
+            width: 100px;
+            height: 100px;
+            border-radius: 300px;
+            margin-bottom: 20px;
+          }
+        }
+
+        > .subjects {
+          > .content-head {
+            margin-bottom: 10px;
+          }
+          > .content-child {
+            padding-left: 100px;
+
+            > p {
+              margin: 10px 0;
+            }
+          }
+        }
+
+        .content-head {
+          position: relative;
+          width: 100%;
+          @include flexCenter();
+          justify-content: flex-start;
+          margin: 8px 0;
+          padding: 8px 0;
+          cursor: pointer;
+          transition: .2s;
+
+          &:hover {
+            background: rgba(0,0,0,0.9);
+          }
+
+          &.active {
+            background: rgba(0,0,0,0.9);
+          }
+
+          &.active::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 100%;
+            background: rgba(0,0,0,1);
+            clip-path: polygon(36% 28%, 100% 50%, 36% 70%, 36% 100%, 0 100%, 0 0, 36% 0);
+          }
+
+          > img {
+            width: 20px;
+            margin: 0 30px;
+          }
+
+          > h3 {
+            font-weight: 500;
+          }
+        }
+      }
+
+      > .right {
+        width: 100%;
+        background: #fff;
+
+        > .myClasses,
+        > .myAssessment,
+        > .myDoubts,
+        > .myAssignment,
+        > .myPreviousLectures{
+          height: 100%;
+          width: 100%;
+          @include flexCenter();
+          flex-direction: column;
+          justify-content: space-evenly;
+
+          > h2 {
+            position: relative;
+            font-size: 40px;
+            text-transform: uppercase;
+            &::before {
+              content: '';
+              position: absolute;
+              left: 50%;
+              top: 130%;
+              transform: translateX(-50%);
+              height: 4px;
+              width: 60px;
+              background: #2797A7;
+            }
+          }
+
+          > .grid__Container {
+            @include flexCenter();
+            align-items: flex-start;
+            max-width: 200px;
+
+            > .box {
+              @include flexCenter();
+              flex-direction: column;
+              margin: 0 20px;
+              text-align: center;
+
+              > img {
+                max-width: 240px;
+              }
+              > p {
+                margin-top: 10px;
+                font-size: 19px;
+                font-weight: 600;
+                line-height: 25px;
+              }
+            }
+          }
+        }
+        > .myDoubts {
+          > .grid__Container {
+            > .box {
+              margin: 0 50px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#calendar {
+  padding: 50px;
+}
