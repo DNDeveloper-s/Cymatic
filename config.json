@@ -17,6 +17,9 @@
 	"myCalendar": {
 		"html": "<div id='calendar'></div>"
 	},
+	"myProfile": {
+		"html": "<div class=\"myProfile\"><div class=\"left\"><div class=\"profilePic\"> <img src=\"./img/yash.jpg\" alt=\"\"><p class=\"id breakBottom\">ID : 00000000</p><div class=\"name breakBottom\">Person Name</div></div><div class=\"detail\"><p>Father's Name:</p><p></p></div><div class=\"detail\"><p>Mobile NO:</p><p></p></div><div class=\"detail\"><p>EMAIL:</p><p></p></div><div class=\"detail\"><p>ADDRESS:</p><p></p></div><div class=\"detail\"><p></p></div></div><div class=\"right\"><div class=\"detail\"><p>Class:</p><p></p></div><div class=\"detail\"><p>Session:</p><p></p></div><div class=\"detail\"><p>School:</p><p></p></div><div class=\"adhaar\"><div class=\"detail\"><p>Course:</p><p></p></div><div class=\"detail\"><p>Amount Paid:</p><p></p></div></div></div></div>"
+	},
 	"myTeacherProfile": {
 		"html": "<div class=\"myProfile\"><div class=\"left\"><div class=\"profilePic\"> <img src=\"./img/yash.jpg\" alt=\"\"><p class=\"id breakBottom\">ID : 00000000</p><div class=\"name breakBottom\">Person Name</div></div><div class=\"detail\"><p>NAME:</p><p></p></div><div class=\"detail\"><p>Mobile NO:</p><p></p></div><div class=\"detail\"><p>EMAIL:</p><p></p></div><div class=\"detail\"><p>ADDRESS:</p><p></p></div><div class=\"detail\"><p></p></div></div><div class=\"right\"><div class=\"detail\"><p>SUB PREFERRED:</p><p></p></div><div class=\"detail\"><p></p></div><div class=\"detail\"><p>CLASS PREFERRED:</p><p></p></div><div class=\"adhaar\"><div class=\"detail\"><p>ID PROOF:</p><p></p></div><div class=\"adhaarBtn\"> AADHAR - ID</div></div></div></div>"
 	},

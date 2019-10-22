@@ -2678,92 +2678,6 @@ input:focus {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.logIn,
-.signUp {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  position: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 400px;
-  background: #fff;
-  z-index: 1999999;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-  border-radius: 2px;
-  padding: 50px 0;
-  transform: translate(-50%, -50%) scale(1, 0);
-  opacity: 0;
-  transition: transform 400ms, opacity 0.2s;
-}
-.logIn.open,
-.signUp.open {
-  transform: translate(-50%, -50%) scale(1, 1);
-  opacity: 1;
-}
-.logIn > .closeL,
-.signUp > .closeL {
-  position: absolute;
-  top: 5%;
-  right: 5%;
-  font-size: 20px;
-  font-weight: 900;
-  cursor: pointer;
-}
-.logIn > form,
-.signUp > form {
-  margin: 50px 0 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.logIn > form > .or,
-.signUp > form > .or {
-  margin: 20px 0;
-}
-.logIn > form > input[type=submit],
-.signUp > form > input[type=submit] {
-  max-width: 180px;
-  color: white;
-  background: #44b9c2;
-  outline: none;
-  border: none;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.7);
-  padding: 10px 30px;
-  border-radius: 100px;
-  margin: 40px auto 40px;
-  transition: 0.4s;
-}
-.logIn > form > input[type=submit]:hover,
-.signUp > form > input[type=submit]:hover {
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
-  transform: translateY(-3px);
-}
-.logIn > form > input[type=submit]:active,
-.signUp > form > input[type=submit]:active {
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.6);
-  transform: translateY(-1px);
-}
-.logIn input,
-.signUp input {
-  width: 250px;
-  border: 2px solid rgba(164, 164, 164, 0.61);
-  font-size: 20px;
-  border-radius: 8px;
-  color: #44b9c2;
-  padding: 5px 10px;
-  background: rgba(237, 237, 237, 0.3);
-}
-
-.signUpBtn {
-  cursor: pointer;
-  text-decoration: underline;
-}
-
 .hero_Section.dashboard {
   margin-top: 110px;
 }
@@ -2797,7 +2711,7 @@ input:focus {
   font-size: 18px;
   font-weight: 700;
   letter-spacing: 2px;
-  color: rgba(0, 0, 0, 0.4);
+  color: rgba(0, 0, 0, 0.8);
 }
 .hero_Section.dashboard > .wrapper > .teacherLogIn > .input--box {
   display: flex;
@@ -2825,9 +2739,11 @@ input:focus {
 }
 .hero_Section.dashboard > .wrapper > .teacherLogIn > .logInBtn--teacher {
   padding: 14px 0;
+  display: block;
   text-align: center;
   background: #22a2a4;
   border-radius: 5px;
+  color: #000;
 }
 .hero_Section.dashboard > .wrapper > .dash__fav {
   width: 100%;
@@ -3800,6 +3716,167 @@ input:focus {
   font-weight: 900;
   font-size: 20px;
   border-radius: 5px;
+}
+
+.wrapper.signUpWrap {
+  padding-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper.signUpWrap > .signUpCard {
+  max-width: 450px;
+  margin: 0 auto;
+  background: #eee;
+  padding: 30px 60px;
+  border-radius: 3px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+  display: block;
+}
+.wrapper.signUpWrap > .signUpCard.none {
+  display: none;
+}
+.wrapper.signUpWrap > .signUpCard.logIn > .socialIcons {
+  margin: 10px 0;
+}
+.wrapper.signUpWrap > .signUpCard > .notReg {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.wrapper.signUpWrap > .signUpCard > h2 {
+  text-align: center;
+}
+.wrapper.signUpWrap > .signUpCard > * {
+  margin: 16px 0;
+  width: 100%;
+  text-align: center;
+}
+.wrapper.signUpWrap > .signUpCard > label {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: rgba(0, 0, 0, 0.8);
+}
+.wrapper.signUpWrap > .signUpCard > .socialIcons {
+  margin: 30px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+.wrapper.signUpWrap > .signUpCard > .socialIcons > a > img {
+  max-width: 150px;
+}
+.wrapper.signUpWrap > .signUpCard > .input--box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
+  border: 1px solid rgba(128, 128, 128, 0.39);
+  background: #fff;
+  padding-left: 25px;
+  margin-top: 3px;
+}
+.wrapper.signUpWrap > .signUpCard > .input--box > img {
+  height: 20px;
+}
+.wrapper.signUpWrap > .signUpCard > .input--box > input {
+  height: 40px;
+  outline: none;
+  border: none;
+  border-left: 1px solid rgba(128, 128, 128, 0.39);
+  font-size: 21px;
+}
+.wrapper.signUpWrap > .signUpCard > .forgotPw {
+  display: block;
+  color: #22a2a4;
+  text-align: right;
+}
+.wrapper.signUpWrap > .signUpCard > .logInBtn--teacher {
+  padding: 14px 0;
+  display: block;
+  text-align: center;
+  background: #22a2a4;
+  border-radius: 5px;
+  color: #000;
+}
+.wrapper.signUpWrap > .signUpCard a {
+  color: #22a2a4;
+}
+.wrapper.signUpWrap > .signUpCard > .borderTopBreak {
+  border-top: 1px solid grey;
+  padding: 15px 0;
+}
+.wrapper > .otpCard {
+  position: relative;
+  width: 80vw;
+  max-width: 600px;
+  background: rgba(243, 243, 243, 0.95);
+  margin: 0 auto;
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: block;
+}
+.wrapper > .otpCard.none {
+  display: none;
+}
+.wrapper > .otpCard.none {
+  display: none;
+}
+.wrapper > .otpCard > * {
+  margin: 15px 0;
+}
+.wrapper > .otpCard a {
+  color: #22a2a4;
+}
+.wrapper > .otpCard > input {
+  width: 80%;
+  margin-bottom: 5px;
+}
+.wrapper > .otpCard > .regOTP {
+  margin-top: 0;
+  font-size: 16px;
+  text-align: right;
+}
+.wrapper > .otpCard > h4 {
+  letter-spacing: 2px;
+  font-size: 27px;
+  margin-bottom: 50px;
+  text-decoration: underline;
+}
+.wrapper > .otpCard > p {
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  width: 80%;
+  margin-bottom: 5px;
+}
+.wrapper > .otpCard .callToActionBtn {
+  margin-bottom: 20px;
+  padding: 10px 55px;
+  background-image: url("../img/pricing_section/gradient_signUpBtn.png");
+  background-size: cover;
+  color: #000;
+  font-weight: 900;
+  font-size: 20px;
+  border-radius: 5px;
+}
+.wrapper > .otpCard > .backToSignUp {
+  position: absolute;
+  left: 5%;
+  top: 5%;
+  cursor: pointer;
+}
+.wrapper > .otpCard > .backToSignUp > i {
+  font-size: 23px;
+  transition: 0.3s;
+}
+.wrapper > .otpCard > .backToSignUp:hover > i {
+  color: #22a2a4;
 }
 
 @keyframes dotAnim {

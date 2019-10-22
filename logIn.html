@@ -16,6 +16,29 @@
     <link rel="stylesheet" href="./sass/style.css">
     <link rel="stylesheet" href="./sass/main.css">
     <link rel="stylesheet" href="./sass/modal.css">
+
+    <link href='./fullcalendar/core/main.css' rel='stylesheet' />
+    <link href='./fullcalendar/daygrid/main.css' rel='stylesheet' />
+
+
+    <script src='./fullcalendar/core/main.js'></script>
+    <script src='./fullcalendar/daygrid/main.js'></script>
+    <script src='./fullcalendar/interaction/main.js'></script>
+    <script>
+
+        let loadCalendar = function() {
+            let calendarEl = document.getElementById('calendar');
+
+            let calendar = new FullCalendar.Calendar(calendarEl, {
+                plugins: [ 'dayGrid', 'interaction' ],
+                defaultView: 'dayGridMonth',
+                selectable: true
+            });
+
+            calendar.render();
+        }
+
+    </script>
 </head>
 <body>
 
@@ -173,214 +196,36 @@
 </header>
 
 <!--Hero Section-->
-<div class="hero_Section about">
-<!--    <img class="backBg desk" src="./img/hero_section/hero_bg.png" alt="">-->
-    <div class="wrapper about classes">
+<div class="hero_Section">
 
-        <div class="pricingContent none">
-            <div class="topContent">
-                <div class="topWrapper">
-                    <div class="left">
-                        <h1>PRICING</h1>
-                        <p>Cymatic Young minds regular E-Classroom Program (Full Course)</p>
-                        <p><img src="./img/pricing_section/rightTick.png" alt=""> <strong>One year</strong> Regular E Classroom Program for <strong>Class IX</strong></p>
-                        <p><img src="./img/pricing_section/rightTick.png" alt=""> <strong>One year</strong> Regular E Classroom Program for <strong>Class X</strong></p>
-                        <p><img src="./img/pricing_section/rightTick.png" alt=""> <strong>Two year</strong> Regular E Classroom Program for <strong>Class IX & Class X</strong></p>
-                    </div>
+    <div class="wrapper signUpWrap">
 
-                    <img src="./img/pricing_section/creative.png" alt="">
-                </div>
+        <div class="signUpCard logIn">
+            <h2>Login</h2>
+            <label for="">Email</label>
+            <div class="input--box">
+                <img src="./img/dashboard_section/email.png" alt="">
+                <input type="password">
             </div>
-
-            <div class="bottomContent">
-                <div class="pricing-form">
-                    <div class="cardContainer">
-                        <div class="card left"><img src="./img/pricing_section/rightTick.png" alt=""> <p>LIVE INTERACTIVE CLASSES</p></div>
-                        <div class="card mid"><img src="./img/pricing_section/rightTick.png" alt=""> <p>100% ACADEMIC SUPPORT</p></div>
-                        <div class="card right"><img src="./img/pricing_section/rightTick.png" alt=""> <p>24*7<br>DOUBT CLEARANCE</p></div>
-                    </div>
-
-                    <div class="class-board__container">
-                        <div class="class">
-                            <label for="">Select Class</label>
-                            <select id="class">
-                                <option style="display: none" value="" disabled selected></option>
-                                <option value="IX">IX</option>
-                                <option value="X">X</option>
-                            </select>
-                        </div>
-                        <div class="board">
-                            <label for="">Select Board</label>
-                            <select id="board">
-                                <option style="display: none" value="" disabled selected></option>
-                                <option value="CBSE">CBSE</option>
-                                <option value="ICSE">ICSE</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="subject">
-                        <label for="">Choose Subject</label>
-                        <select id="subject">
-                            <option style="display: none" value="" disabled selected></option>
-                            <option value="Maths">Mathematics</option>
-                            <option value="Science">Science</option>
-                            <option value="Social Science">Social Science</option>
-                            <option value="English">English</option>
-                            <option value="Hindi">Hindi</option>
-                            <option value="Maths + Science">Maths + Science</option>
-                            <option value="Maths + Science + Social Science">Math + Science + Social Science</option>
-                            <option value="All Subjects">All Subjects</option>
-                        </select>
-                    </div>
-
-                    <a class="submit">Next <i class="material-icons">chevron_right</i></a>
-                </div>
-
-                <div class="dynamic-content none">
-                    <div class="headingTabs">
-                        <p class="class">Class IX</p>
-                        <p class="subject">Mathematics</p>
-                    </div>
-
-                    <div class="description">
-                        <h2>Course description</h2>
-                        <div class="line"><img src="./img/pricing_section/rightTick.png" alt=""><p>Small batch size of 8-12 students.</p></div>
-                        <div class="line"><img src="./img/pricing_section/rightTick.png" alt=""><p>Relevant study material will be provided.</p></div>
-                        <div class="line"><img src="./img/pricing_section/rightTick.png" alt=""><p class="dynamicLine">English Syllabus of Class IX will be taught thoroughly.</p></div>
-                        <div class="line"><img src="./img/pricing_section/rightTick.png" alt=""><p>Regular tests wil be conducted on school as well as other competitive exam pattern.</p></div>
-                        <div class="line"><img src="./img/pricing_section/rightTick.png" alt=""><p>The result of each test wil be evaluated using Artificial Intelligence to evaluate the strength and weakness of students and the same shall be sent to parents through the SMS.</p></div>
-                    </div>
-
-                    <div class="pricing-cards">
-                        <div class="card">
-                            <h3>Advanced Plan</h3>
-                            <div class="line"><img src="./img/pricing_section/live_classes.png" alt=""><p>Live Classes</p><img class="ticks" src="./img/pricing_section/blue_tick.png" alt=""></div>
-                            <div class="line"><img src="./img/pricing_section/videorec.png" alt=""><p>Video recording facility</p><img class="ticks" src="./img/pricing_section/red_tick.png" alt=""></div>
-                            <div class="line"><img src="./img/pricing_section/allindiatestseries.png" alt=""><p>All India Test Series</p><img class="ticks" src="./img/pricing_section/blue_tick.png" alt=""></div>
-                            <div class="line"><img src="./img/pricing_section/prvsyrpapers.png" alt=""><p>Previous years papers</p><img class="ticks" src="./img/pricing_section/blue_tick.png" alt=""></div>
-                            <div class="line"><img src="./img/pricing_section/live_doubt.png" alt=""><p>Live Doubts</p><img class="ticks" src="./img/pricing_section/blue_tick.png" alt=""></div>
-                            <div class="line"><img src="./img/pricing_section/help.png" alt=""><p>24*7 help</p><img class="ticks" src="./img/pricing_section/red_tick.png" alt=""></div>
-                            <p><strong class="advanced">PRICE: ₹ 5,999.00</strong><dip>(GST included)</dip></p>
-                            <p>3 Months installment facility available</p>
-                            <a href="#">BUY NOW</a>
-                        </div>
-                        <div class="card">
-                            <h3>Unlimited Plan</h3>
-                            <div class="line"><img src="./img/pricing_section/live_classes.png" alt=""><p>Live Classes</p><img class="ticks" src="./img/pricing_section/blue_tick.png" alt=""></div>
-                            <div class="line"><img src="./img/pricing_section/videorec.png" alt=""><p>Video recording facility</p><img class="ticks" src="./img/pricing_section/blue_tick.png" alt=""></div>
-                            <div class="line"><img src="./img/pricing_section/allindiatestseries.png" alt=""><p>All India Test Series</p><img class="ticks" src="./img/pricing_section/blue_tick.png" alt=""></div>
-                            <div class="line"><img src="./img/pricing_section/prvsyrpapers.png" alt=""><p>Previous years papers</p><img class="ticks" src="./img/pricing_section/blue_tick.png" alt=""></div>
-                            <div class="line"><img src="./img/pricing_section/live_doubt.png" alt=""><p>Live Doubts</p><img class="ticks" src="./img/pricing_section/blue_tick.png" alt=""></div>
-                            <div class="line"><img src="./img/pricing_section/help.png" alt=""><p>24*7 help</p><img class="ticks" src="./img/pricing_section/blue_tick.png" alt=""></div>
-                            <p><strong class="unlimited">PRICE: ₹ 7,999.00</strong><dip>(GST included)</dip></p>
-                            <p>3 Months installment facility available</p>
-                            <a href="#">BUY NOW</a>
-                        </div>
-                    </div>
-                </div>
+            <label for="">Password</label>
+            <div class="input--box">
+                <img src="./img/dashboard_section/pwSmall.png" alt="">
+                <input type="password">
             </div>
-        </div>
-
-        <div class="finalizingContent">
-            <div class="courseDetail">
-                <h2 class="heading">Course Detail</h2>
-                <div class="border">
-                    <div class="details--container">
-                        <ul>
-                            <li>Class :</li>
-                            <li>Subject :</li>
-                            <li>Plan :</li>
-                            <li>Price :</li>
-                        </ul>
-                        <ul>
-                            <li>9th</li>
-                            <li>Maths</li>
-                            <li>Unlimited Plan (Annually)</li>
-                            <li class="details--price">₹ 12,999.00</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="credentials">
-                <div class="signUp--pricing">
-                    <p>Don't have an account?</p>
-                    <input type="text" placeholder="Name :">
-                    <input type="text" placeholder="Email :">
-                    <input type="text" placeholder="Mobile No. :">
-                    <input type="text" placeholder="Address :">
-                    <a class="signUp-pricingBtn callToActionBtn" href="#">Sign Up</a>
-                    <div class="bottom">
-                        <span>Have already an account? </span><a href="#">Login Here</a>
-                    </div>
-                </div>
-                <div class="login--pricing">
-                    <input type="text" placeholder="Email :">
-                    <input type="text" placeholder="Mobile No. :">
-                    <a class="logIn-pricingBtn callToActionBtn" href="#">Log In</a>
-                    <div class="bottom">
-                        <span>Don't have an account? </span><a href="#">Sign Up</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="otp--verification">
-                <h4>2 Step Verification</h4>
-                <p>Enter a Verification Code<br>Get a Verification Code from your OTP Mobile</p>
-                <input type="text" placeholder="OTP">
-                <a class="logIn-pricingBtn callToActionBtn" href="#">Log In</a>
-                <div class="bottom">
-                    <span>Having Trouble Logging in ? </span><a href="#">Contact Us</a>
-                </div>
-            </div>
-
-            <div class="billing--details">
-                <h2 class="heading">Billing Details</h2>
-                <div class="details--container">
-                    <div class="name">
-                        <span class="placeHolder">Name :</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="name--details">Dynamic content here!</span>
-                    </div>
-                    <div class="email">
-                        <span class="placeHolder">Email :</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="email--details">Dynamic content here!</span>
-                    </div>
-                    <div class="mobile">
-                        <span class="placeHolder">Mobile No. :</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="mobile--details">Dynamic content here!</span>
-                    </div>
-                    <div class="address">
-                        <span class="placeHolder">Address :</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="address--details">Dynamic content here!</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="payment--details">
-                <h2 class="heading">Payment Details</h2>
-                <div class="payment--mode__container">
-                    <div class="input__mode">
-                        <input type="radio" name="payment_mode">
-                        <label for="">Credit / Debit Card</label>
-                    </div>
-                    <div class="input__mode">
-                        <input type="radio" name="payment_mode">
-                        <label for="">Net Banking</label>
-                    </div>
-                    <div class="input__mode">
-                        <input type="radio" name="payment_mode">
-                        <label for="">Paytm</label>
-                    </div>
-                    <div class="input__mode">
-                        <input type="radio" name="payment_mode">
-                        <label for="">Pay Razer</label>
-                    </div>
-                    <div class="input__mode">
-                        <input type="radio" name="payment_mode">
-                        <label for="">BHIM UPI</label>
-                    </div>
-                    <a class="callToActionBtn" href="#">Next</a>
-                </div>
+            <a href="#" class="forgotPw">Forgot Password?</a>
+            <a href="" class="logInBtn--teacher">
+                LogIn
+            </a>
+            <p>You don't have account? <a href="./signUp.html">Sign Up</a></p>
+            <p class="notReg">or<br>Not registered</p>
+            <p class="borderTopBreak">Try Easy Login Through</p>
+            <div class="socialIcons">
+                <a href="#"><img src="./img/dashboard_section/facebookBtn.png" alt=""></a>
+                <a href="#"><img src="./img/dashboard_section/googleBtn.png" alt=""></a>
             </div>
         </div>
     </div>
+
 </div>
 
 
@@ -534,10 +379,35 @@
         }
     });
 
-
     $('.menu').click(function () {
         document.querySelector('.mobNav').classList.toggle('open');
     });
+
+    // fetch("config.json")
+    //     .then(response => response.json())
+    //     .then(json => console.log(json));
+
+    let contentBtn = document.querySelectorAll('.content-head');
+    let right = document.querySelector('.mainContent');
+    function removeClassFromSiblings() {
+        contentBtn.forEach(cur => {
+            cur.classList.remove('active');
+        })
+    }
+    contentBtn.forEach(cur => {
+        cur.addEventListener('click', () => {
+            removeClassFromSiblings();
+            cur.classList.add('active');
+            fetch("config.json")
+                .then(response => response.json())
+                .then(json => {
+                    right.innerHTML = json[cur.dataset.id].html;
+                    if(cur.dataset.id === 'myCalendar') {
+                        loadCalendar();
+                    }
+                });
+        })
+    })
 </script>
 
 </body>

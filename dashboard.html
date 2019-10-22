@@ -161,8 +161,8 @@
         <div class="btns">
             <a class="p w free_btn" href="./demo.html">FREE DEMO</a>
             <div class="logBtns">
-                <a href="#" class="p login loginBtn">Log in</a>
-                <a href="#" class="p signup signUpBtn active">Sign up</a>
+                <a href="./logIn.html" class="p login loginBtn">Log in</a>
+                <a href="./signUp.html" class="p signup signUpBtn active">Sign up</a>
             </div>
         </div>
     </div>
@@ -194,52 +194,6 @@
         </nav>
     </div>
 </header>
-
-<div id="logIn" class="mod">
-
-    <form class="mod-content animate" action="/action_page.php">
-
-        <div class="imgcontainer">
-            <span onclick="document.getElementById('logIn').style.display='none'" class="close" title="Close PopUp">&times;</span>
-            <img src="1.png" alt="Avatar" class="avatar">
-            <h1 style="text-align:center">Login On Cymatic</h1>
-        </div>
-
-        <div class="container">
-            <input type="text" placeholder="Enter Username" name="uname">
-            <input type="password" placeholder="Enter Password" name="psw">
-            <button type="submit">Login</button>
-            <input type="checkbox" style="margin:26px 30px;"> Remember me
-            <a href="#" style="text-decoration:none; float:right; margin-right:34px; margin-top:26px;">Forgot Password ?</a>
-        </div>
-
-    </form>
-
-</div>
-
-<div id="signUp" class="modal">
-
-    <form class="modal-content animate" action="/action_page.php">
-
-        <div class="imgcontainer">
-            <span onclick="document.getElementById('signUp').style.display='none'" class="close" title="Close PopUp">&times;</span>
-            <img src="1.png" alt="Avatar" class="avatar">
-            <h1 style="text-align:center">SignUp On Cymatic</h1>
-        </div>
-
-        <div class="container">
-            <input type="text" placeholder="Name" name="name">
-            <input type="tele" placeholder="Phone No." name="phone"/>
-
-            <input type="text" placeholder="Email" name="email"/>
-
-            <input type="password" placeholder="Enter Password" name="password">
-            <button type="submit">SignUp</button>
-        </div>
-
-    </form>
-
-</div>
 
 <!--Hero Section-->
 <div class="hero_Section dashboard">
@@ -295,7 +249,7 @@
                     </div>
                 </div>
                 <div class="profile break">
-                    <div class="content-head">
+                    <div class="content-head" data-id="myProfile">
                         <img src="./img/dashboard_section/profile.png" alt="">
                         <h3>Profile</h3>
                     </div>
@@ -311,16 +265,6 @@
             </div>
 
             <div class="right mainContent">
-
-<!--                <div class="myPreviousLectures">-->
-<!--                    <h2>Previous Lectures</h2>-->
-<!--                    <div class="grid__Container">-->
-<!--                        <div class="box">-->
-<!--                            <img src="./img/dashboard_section/previousLectures.png" alt="">-->
-<!--                            <p>Watch your Previous Lecture here!</p>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
             </div>
         </div>
     </div>

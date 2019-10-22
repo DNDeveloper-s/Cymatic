@@ -35,7 +35,7 @@
         font-size: 18px;
         font-weight: 700;
         letter-spacing: 2px;
-        color: rgba(0,0,0,.4);
+        color: rgba(0,0,0,.8);
       }
 
       > .input--box {
@@ -66,9 +66,11 @@
 
       > .logInBtn--teacher {
         padding: 14px 0;
+        display: block;
         text-align: center;
         background: #22a2a4;
         border-radius: 5px;
+        color: #000;
       }
     }
 
