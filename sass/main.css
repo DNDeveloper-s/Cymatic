@@ -2772,6 +2772,63 @@ input:focus {
   border-bottom: 60px solid rgba(0, 0, 0, 0.8);
   box-sizing: content-box;
 }
+.hero_Section.dashboard > .wrapper.notLoggedIn {
+  padding: 120px 0;
+}
+.hero_Section.dashboard > .wrapper.borderNone {
+  border: none;
+}
+.hero_Section.dashboard > .wrapper > .teacherLogIn {
+  max-width: 450px;
+  margin: 0 auto;
+  background: #eee;
+  padding: 30px 60px;
+  border-radius: 3px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+}
+.hero_Section.dashboard > .wrapper > .teacherLogIn > h2 {
+  text-align: center;
+}
+.hero_Section.dashboard > .wrapper > .teacherLogIn > * {
+  margin: 16px 0;
+  width: 100%;
+}
+.hero_Section.dashboard > .wrapper > .teacherLogIn > label {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: rgba(0, 0, 0, 0.4);
+}
+.hero_Section.dashboard > .wrapper > .teacherLogIn > .input--box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
+  border: 1px solid rgba(128, 128, 128, 0.39);
+  background: #fff;
+  padding-left: 25px;
+}
+.hero_Section.dashboard > .wrapper > .teacherLogIn > .input--box > img {
+  height: 20px;
+}
+.hero_Section.dashboard > .wrapper > .teacherLogIn > .input--box > input {
+  height: 40px;
+  outline: none;
+  border: none;
+  border-left: 1px solid rgba(128, 128, 128, 0.39);
+  font-size: 21px;
+}
+.hero_Section.dashboard > .wrapper > .teacherLogIn > .forgotPw {
+  display: block;
+  color: #22a2a4;
+  text-align: right;
+}
+.hero_Section.dashboard > .wrapper > .teacherLogIn > .logInBtn--teacher {
+  padding: 14px 0;
+  text-align: center;
+  background: #22a2a4;
+  border-radius: 5px;
+}
 .hero_Section.dashboard > .wrapper > .dash__fav {
   width: 100%;
   height: 60px;
@@ -2782,6 +2839,9 @@ input:focus {
   padding-right: 100px;
   background: rgba(0, 0, 0, 0.8);
 }
+.hero_Section.dashboard > .wrapper > .dash__fav.none {
+  display: none;
+}
 .hero_Section.dashboard > .wrapper > .dash__fav > img {
   height: 30px;
 }
@@ -2789,6 +2849,9 @@ input:focus {
   width: 100%;
   display: flex;
   justify-content: center;
+}
+.hero_Section.dashboard > .wrapper > .dashboard__container.teacher.none {
+  display: none;
 }
 .hero_Section.dashboard > .wrapper > .dashboard__container > .left {
   background: rgba(0, 0, 0, 0.8);
@@ -2813,6 +2876,8 @@ input:focus {
   height: 100px;
   border-radius: 300px;
   margin-bottom: 20px;
+  border: 5px solid rgba(237, 237, 237, 0.43);
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.3);
 }
 .hero_Section.dashboard > .wrapper > .dashboard__container > .left > .subjects > .content-head {
   margin-bottom: 10px;
@@ -2867,7 +2932,8 @@ input:focus {
 .hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myAssessment,
 .hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myDoubts,
 .hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myAssignment,
-.hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myPreviousLectures {
+.hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myPreviousLectures,
+.hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myCreateTest {
   height: 100%;
   width: 100%;
   display: flex;
@@ -2880,7 +2946,8 @@ input:focus {
 .hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myAssessment > h2,
 .hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myDoubts > h2,
 .hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myAssignment > h2,
-.hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myPreviousLectures > h2 {
+.hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myPreviousLectures > h2,
+.hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myCreateTest > h2 {
   position: relative;
   font-size: 40px;
   text-transform: uppercase;
@@ -2889,7 +2956,8 @@ input:focus {
 .hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myAssessment > h2::before,
 .hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myDoubts > h2::before,
 .hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myAssignment > h2::before,
-.hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myPreviousLectures > h2::before {
+.hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myPreviousLectures > h2::before,
+.hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myCreateTest > h2::before {
   content: "";
   position: absolute;
   left: 50%;
@@ -2903,7 +2971,8 @@ input:focus {
 .hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myAssessment > .grid__Container,
 .hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myDoubts > .grid__Container,
 .hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myAssignment > .grid__Container,
-.hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myPreviousLectures > .grid__Container {
+.hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myPreviousLectures > .grid__Container,
+.hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myCreateTest > .grid__Container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2914,7 +2983,8 @@ input:focus {
 .hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myAssessment > .grid__Container > .box,
 .hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myDoubts > .grid__Container > .box,
 .hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myAssignment > .grid__Container > .box,
-.hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myPreviousLectures > .grid__Container > .box {
+.hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myPreviousLectures > .grid__Container > .box,
+.hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myCreateTest > .grid__Container > .box {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2926,14 +2996,16 @@ input:focus {
 .hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myAssessment > .grid__Container > .box > img,
 .hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myDoubts > .grid__Container > .box > img,
 .hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myAssignment > .grid__Container > .box > img,
-.hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myPreviousLectures > .grid__Container > .box > img {
+.hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myPreviousLectures > .grid__Container > .box > img,
+.hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myCreateTest > .grid__Container > .box > img {
   max-width: 240px;
 }
 .hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myClasses > .grid__Container > .box > p,
 .hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myAssessment > .grid__Container > .box > p,
 .hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myDoubts > .grid__Container > .box > p,
 .hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myAssignment > .grid__Container > .box > p,
-.hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myPreviousLectures > .grid__Container > .box > p {
+.hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myPreviousLectures > .grid__Container > .box > p,
+.hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myCreateTest > .grid__Container > .box > p {
   margin-top: 10px;
   font-size: 19px;
   font-weight: 600;
@@ -2941,6 +3013,90 @@ input:focus {
 }
 .hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myDoubts > .grid__Container > .box {
   margin: 0 50px;
+}
+.hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myProfile {
+  display: flex;
+  height: 100%;
+}
+.hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myProfile > .left {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myProfile > .left > .profilePic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+.hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myProfile > .left > .profilePic > img {
+  border-radius: 1000px;
+  width: 120px;
+  height: 120px;
+  margin: 20px 0;
+  border: 5px solid rgba(237, 237, 237, 0.43);
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.3);
+}
+.hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myProfile > .left > .profilePic > .id {
+  letter-spacing: 2px;
+  font-size: 18px;
+  min-width: 350px;
+  max-width: 450px;
+}
+.hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myProfile > .left > .profilePic > .name {
+  min-width: 350px;
+  max-width: 450px;
+  letter-spacing: 2px;
+  font-size: 18px;
+  font-weight: 700;
+}
+.hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myProfile > .right {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 100px 0;
+  justify-content: flex-start;
+}
+.hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myProfile > .right > .adhaar {
+  margin: 100px 0;
+}
+.hero_Section.dashboard > .wrapper > .dashboard__container > .right > .myProfile > .right > .adhaar > .adhaarBtn {
+  margin: 40px 0;
+  min-width: 350px;
+  max-width: 450px;
+  padding: 14px 0;
+  text-align: center;
+  background: #ccc;
+  letter-spacing: 2px;
+  font-size: 18px;
+  font-weight: 700;
+}
+.hero_Section.dashboard > .wrapper > .dashboard__container > .right .detail {
+  min-width: 350px;
+  max-width: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 800;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  padding: 18px 0;
+}
+.hero_Section.dashboard > .wrapper > .dashboard__container > .right .detail > p {
+  padding: 0 10px;
+}
+.hero_Section.dashboard > .wrapper > .dashboard__container > .right .breakBottom {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  padding: 18px 0;
 }
 
 #calendar {

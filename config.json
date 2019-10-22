@@ -16,5 +16,14 @@
 	},
 	"myCalendar": {
 		"html": "<div id='calendar'></div>"
+	},
+	"myTeacherProfile": {
+		"html": "<div class=\"myProfile\"><div class=\"left\"><div class=\"profilePic\"> <img src=\"./img/yash.jpg\" alt=\"\"><p class=\"id breakBottom\">ID : 00000000</p><div class=\"name breakBottom\">Person Name</div></div><div class=\"detail\"><p>NAME:</p><p></p></div><div class=\"detail\"><p>Mobile NO:</p><p></p></div><div class=\"detail\"><p>EMAIL:</p><p></p></div><div class=\"detail\"><p>ADDRESS:</p><p></p></div><div class=\"detail\"><p></p></div></div><div class=\"right\"><div class=\"detail\"><p>SUB PREFERRED:</p><p></p></div><div class=\"detail\"><p></p></div><div class=\"detail\"><p>CLASS PREFERRED:</p><p></p></div><div class=\"adhaar\"><div class=\"detail\"><p>ID PROOF:</p><p></p></div><div class=\"adhaarBtn\"> AADHAR - ID</div></div></div></div>"
+	},
+    "myCreateTest": {
+        "html": "<div class=\"myCreateTest\"> <h2>My Class</h2> <div class=\"grid__Container\"> <div class=\"box\"> <img src=\"./img/dashboard_section/createTests.png\" alt=\"\"> <p>You can create your Test here!</p></div></div></div>"
+    },
+	"myTeacherClasses": {
+		"html": "<div class=\"myClasses\"> <h2>My Class</h2> <div class=\"grid__Container\"> <div class=\"box\"> <img src=\"./img/dashboard_section/createTests.png\" alt=\"\"> <p>You can create your Test here!</p></div><div class=\"box\"> <img src=\"./img/dashboard_section/goLive.png\" alt=\"\"> <p>Go Live from here!</p></div><div class=\"box\"> <img src=\"./img/dashboard_section/yourCalendar.png\" alt=\"\"> <p>Check your Calendar</p></div></div></div>"
 	}
 }
