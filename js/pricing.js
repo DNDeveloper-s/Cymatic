@@ -20,10 +20,10 @@ function main() {
     subjectHead.innerHTML = `${subject.value}`;
     dynamicLine.innerHTML = '';
     if(subject.value.includes("+")) {
-        if(subject.value == 'Maths + Science') {
+        if(subject.value === 'Maths + Science') {
             dynamicLine.innerHTML = `Maths and Science Syllabus of Class ${classes.value} will be taught thoroughly.`;
         }
-        if(subject.value == 'Maths + Science + Social Science') {
+        if(subject.value ==='Maths + Science + Social Science') {
             dynamicLine.innerHTML = `Maths, Science and Social Science Syllabus of Class ${classes.value} will be taught thoroughly.`;
         }
     } else {
@@ -33,146 +33,16 @@ function main() {
     let classesObj = Object.prototype.valueOf.call(classes.value);
     let subjectObj = Object.prototype.valueOf.call(subject.value);
 
-    advanced.innerHTML = '';
-    advanced .innerHTML = `PRICE: ₹ ${data[classesObj][subjectObj].Advanced.price}`;
+    fetch("./js/pricingData.json")
+        .then(response => response.json())
+        .then(json => {
+            advanced.innerHTML = '';
+            advanced .innerHTML = `PRICE: ₹ ${json[classesObj][subjectObj].Advanced.price}`;
 
-    unlimited.innerHTML = '';
-    unlimited .innerHTML = `PRICE: ₹ ${data[classesObj][subjectObj].Unlimited.price}`;
+            unlimited.innerHTML = '';
+            unlimited .innerHTML = `PRICE: ₹ ${json[classesObj][subjectObj].Unlimited.price}`;
+        });
 }
 
 submit.addEventListener('click', main);
 
-let data = {
-    "IX": {
-        "English": {
-            "Advanced": {
-                "price": "5,999.00"
-            },
-            "Unlimited": {
-                "price": "7,999.00"
-            }
-        },
-        "Social Science": {
-            "Advanced": {
-                "price": "9,999.00"
-            },
-            "Unlimited": {
-                "price": "12,999.00"
-            }
-        },
-        "Science": {
-            "Advanced": {
-                "price": "9,999.00"
-            },
-            "Unlimited": {
-                "price": "12,999.00"
-            }
-        },
-        "Maths": {
-            "Advanced": {
-                "price": "9,999.00"
-            },
-            "Unlimited": {
-                "price": "12,999.00"
-            }
-        },
-        "Hindi": {
-            "Advanced": {
-                "price": "5,999.00"
-            },
-            "Unlimited": {
-                "price": "7,999.00"
-            }
-        },
-        "Maths + Science": {
-            "Advanced": {
-                "price": "22,999.00"
-            },
-            "Unlimited": {
-                "price": "24,999.00"
-            }
-        },
-        "Maths + Science + Social Science": {
-            "Advanced": {
-                "price": "40,999.00"
-            },
-            "Unlimited": {
-                "price": "43,999.00"
-            }
-        },
-        "All Subjects": {
-            "Advanced": {
-                "price": "44,999.00"
-            },
-            "Unlimited": {
-                "price": "49,999.00"
-            }
-        }
-    },
-    "X": {
-        "English": {
-            "Advanced": {
-                "price": "5,999.00"
-            },
-            "Unlimited": {
-                "price": "7,999.00"
-            }
-        },
-        "Social Science": {
-            "Advanced": {
-                "price": "9,999.00"
-            },
-            "Unlimited": {
-                "price": "12,999.00"
-            }
-        },
-        "Science": {
-            "Advanced": {
-                "price": "9,999.00"
-            },
-            "Unlimited": {
-                "price": "12,999.00"
-            }
-        },
-        "Maths": {
-            "Advanced": {
-                "price": "9,999.00"
-            },
-            "Unlimited": {
-                "price": "12,999.00"
-            }
-        },
-        "Hindi": {
-            "Advanced": {
-                "price": "5,999.00"
-            },
-            "Unlimited": {
-                "price": "7,999.00"
-            }
-        },
-        "Maths + Science": {
-            "Advanced": {
-                "price": "22,999.00"
-            },
-            "Unlimited": {
-                "price": "24,999.00"
-            }
-        },
-        "Maths + Science + Social Science": {
-            "Advanced": {
-                "price": "40,999.00"
-            },
-            "Unlimited": {
-                "price": "43,999.00"
-            }
-        },
-        "All Subjects": {
-            "Advanced": {
-                "price": "44,999.00"
-            },
-            "Unlimited": {
-                "price": "49,999.00"
-            }
-        }
-    },
-}

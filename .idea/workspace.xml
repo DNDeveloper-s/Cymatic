@@ -2,13 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="76585f36-8743-4780-9dbd-eed59e6d050f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/sass/layout/_dashboard.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sass/layout/_pricing.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes.html" beforeDir="false" afterPath="$PROJECT_DIR$/classes.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/pricing.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/pricing.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/studyMaterial.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/studyMaterial.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pricing.html" beforeDir="false" afterPath="$PROJECT_DIR$/pricing.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/layout/hero.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/layout/hero.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sass/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/sass/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sass/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/sass/main.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sass/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/studyMaterial.html" beforeDir="false" afterPath="$PROJECT_DIR$/studyMaterial.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -107,6 +111,10 @@
       <workItem from="1569510458581" duration="1666000" />
       <workItem from="1570427200808" duration="2348000" />
       <workItem from="1570623383517" duration="14099000" />
+      <workItem from="1571593270762" duration="7138000" />
+      <workItem from="1571633373482" duration="5464000" />
+      <workItem from="1571653246814" duration="1966000" />
+      <workItem from="1571669738632" duration="998000" />
     </task>
     <servers />
   </component>
