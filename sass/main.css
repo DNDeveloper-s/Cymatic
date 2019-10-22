@@ -3778,7 +3778,10 @@ input:focus {
   padding-left: 25px;
   margin-top: 3px;
 }
-.wrapper.signUpWrap > .signUpCard > .input--box > img {
+.wrapper.signUpWrap > .signUpCard > .input--box > .icon {
+  width: 30px;
+}
+.wrapper.signUpWrap > .signUpCard > .input--box > .icon > img {
   height: 20px;
 }
 .wrapper.signUpWrap > .signUpCard > .input--box > input {

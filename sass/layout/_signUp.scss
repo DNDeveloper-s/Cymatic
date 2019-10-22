@@ -66,8 +66,12 @@
         padding-left: 25px;
         margin-top: 3px;
 
-        > img {
-          height: 20px;
+        > .icon {
+          width: 30px;
+
+          > img {
+            height: 20px;
+          }
         }
 
         > input {
