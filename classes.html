@@ -273,10 +273,10 @@
                 <h3>Your Customised Course is ready</h3>
                 <h2 class="classAcc"></h2>
                 <div class="container">
-                    <div class="card card1">200 +<br>Lectures</div>
-                    <div class="card card2">150 + hours<br>of Video</div>
-                    <div class="card card3">Study<br>Material</div>
-                    <div class="card card4">Live<br>Interactive<br>Classrooms</div>
+                    <a href="#" class="card card1">200 +<br>Lectures</a>
+                    <a href="#" class="card card2">150 + hours<br>of Video</a>
+                    <a href="#" class="card card3">Study<br>Material</a>
+                    <a href="#" class="card card4 liveClass">Live<br>Interactive<br>Classrooms</a>
                 </div>
                 <a href="#">Join Now</a>
             </div>
@@ -707,7 +707,40 @@
         e.preventDefault();
         $('.bottomContent.classes').addClass('active');
         document.querySelector('.classAcc').innerHTML = `Class ${classValue}th`;
-    })
+    });
+
+
+    let liveClassBtn = document.querySelector('.liveClass');
+
+    function getClassLaunchURL() {
+        let xhr = new XMLHttpRequest();
+        xhr.open("POST", "https://api.braincert.com/v2/getclasslaunch?apikey=zVPjcDUW3ysSEAvnVZNX&class_id=256331&userId=19&userName=Teacher&isTeacher=1&courseName=education\n" +
+            "&lessonName=tester&lessonTime=60&isRecord=0", true);
+        xhr.onload = function (e) {
+            if (xhr.readyState === 4) {
+                if (xhr.status === 200) {
+                    // console.log(xhr.response);
+                    let response = JSON.parse(xhr.response);
+                    console.log(response);
+                    liveClassBtn.addEventListener('click', function() {
+                        let classID = response;
+                        this.setAttribute('href', `${classID.launchurl}`);
+                        // console.log(this);
+                    });
+                } else {
+                    console.error(xhr.statusText);
+                    return null;
+                }
+            }
+        };
+        xhr.onerror = function (e) {
+            console.error(xhr.statusText);
+        };
+        xhr.send(null);
+    }
+
+    getClassLaunchURL();
+
 </script>
 
 </body>

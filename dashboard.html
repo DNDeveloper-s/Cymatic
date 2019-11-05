@@ -492,27 +492,7 @@
         xhr.send(null);
     }
 
-    function getClassLaunchURL() {
-        let xhr = new XMLHttpRequest();
-        xhr.open("POST", "https://api.braincert.com/v2/getclasslaunch?apikey=zVPjcDUW3ysSEAvnVZNX&class_id=254890&userId=19&userName=Teacher&isTeacher=1&courseName=education\n" +
-            "&lessonName=tester&lessonTime=60&isRecord=0", true);
-        xhr.onload = function (e) {
-            if (xhr.readyState === 4) {
-                if (xhr.status === 200) {
-                    // console.log(xhr.response);
-                    let response = JSON.parse(xhr.response);
-                    console.log(response);
-                } else {
-                    console.error(xhr.statusText);
-                }
-            }
-        };
-        xhr.onerror = function (e) {
-            console.error(xhr.statusText);
-        };
-        xhr.send(null);
-    }
-    getClassLaunchURL();
+
 
     function classesListFn() {
         console.log(classesList[0].date);
