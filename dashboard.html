@@ -430,6 +430,7 @@
     //     .then(response => response.json())
     //     .then(json => console.log(json));
 
+    let classesList = [];
     let contentBtn = document.querySelectorAll('.content-head');
     let right = document.querySelector('.mainContent');
     function removeClassFromSiblings() {
@@ -447,10 +448,75 @@
                     right.innerHTML = json[cur.dataset.id].html;
                     if(cur.dataset.id === 'myCalendar') {
                         loadCalendar();
+                        let fcBtns = document.querySelectorAll('.fc-button-group button');
+                        fcBtns.forEach(cur => {
+                            cur.addEventListener('click', updateCalendar);
+                        });
+                        listClass();
                     }
                 });
         })
-    })
+    });
+
+    function updateCalendar() {
+        classesList.forEach(cur => {
+            let fcDayProp = document.querySelector(`.fc-day[data-date="${cur.date}"]`);
+            if(fcDayProp) {
+                fcDayProp.style.textAlign = 'center';
+                fcDayProp.style.background = 'salmon';
+                fcDayProp.innerHTML = `<p style="height: 100%;display: flex;justify-content: center;align-items: center;">${cur.status}</p>`;
+            }
+        });
+    }
+
+
+    function listClass() {
+        let xhr = new XMLHttpRequest();
+        xhr.open("POST", "http://class.cymatic.in/v2/listclass?apikey=zVPjcDUW3ysSEAvnVZNX&limit=25", true);
+        xhr.onload = function (e) {
+            if (xhr.readyState === 4) {
+                if (xhr.status === 200) {
+                    // console.log(xhr.response);
+                    let response = JSON.parse(xhr.response);
+                    classesList = response.classes;
+                    console.log(classesList);
+                    updateCalendar();
+                } else {
+                    console.error(xhr.statusText);
+                }
+            }
+        };
+        xhr.onerror = function (e) {
+            console.error(xhr.statusText);
+        };
+        xhr.send(null);
+    }
+
+    function getClassLaunchURL() {
+        let xhr = new XMLHttpRequest();
+        xhr.open("POST", "https://api.braincert.com/v2/getclasslaunch?apikey=zVPjcDUW3ysSEAvnVZNX&class_id=254890&userId=19&userName=Teacher&isTeacher=1&courseName=education\n" +
+            "&lessonName=tester&lessonTime=60&isRecord=0", true);
+        xhr.onload = function (e) {
+            if (xhr.readyState === 4) {
+                if (xhr.status === 200) {
+                    // console.log(xhr.response);
+                    let response = JSON.parse(xhr.response);
+                    console.log(response);
+                } else {
+                    console.error(xhr.statusText);
+                }
+            }
+        };
+        xhr.onerror = function (e) {
+            console.error(xhr.statusText);
+        };
+        xhr.send(null);
+    }
+    getClassLaunchURL();
+
+    function classesListFn() {
+        console.log(classesList[0].date);
+    }
 </script>
 
 </body>

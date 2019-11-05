@@ -3,12 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="76585f36-8743-4780-9dbd-eed59e6d050f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logIn.html" beforeDir="false" afterPath="$PROJECT_DIR$/logIn.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sass/layout/_signUp.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/layout/_signUp.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/layout/_dashboard.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/layout/_dashboard.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sass/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/sass/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sass/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/sass/main.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sass/modal.css" beforeDir="false" afterPath="$PROJECT_DIR$/sass/modal.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/signUp.html" beforeDir="false" afterPath="$PROJECT_DIR$/signUp.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/teacherDashBoard.html" beforeDir="false" afterPath="$PROJECT_DIR$/teacherDashBoard.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -111,7 +110,13 @@
       <workItem from="1571633373482" duration="5464000" />
       <workItem from="1571653246814" duration="1966000" />
       <workItem from="1571669738632" duration="998000" />
-      <workItem from="1571750014043" duration="8504000" />
+      <workItem from="1571750014043" duration="8671000" />
+      <workItem from="1572888872330" duration="1259000" />
+      <workItem from="1572894166053" duration="1511000" />
+      <workItem from="1572936548013" duration="3017000" />
+      <workItem from="1572975868769" duration="858000" />
+      <workItem from="1572978352341" duration="2556000" />
+      <workItem from="1572982103024" duration="461000" />
     </task>
     <servers />
   </component>
