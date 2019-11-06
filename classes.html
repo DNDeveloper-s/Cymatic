@@ -273,10 +273,10 @@
                 <h3>Your Customised Course is ready</h3>
                 <h2 class="classAcc"></h2>
                 <div class="container">
-                    <a href="#" class="card card1">200 +<br>Lectures</a>
-                    <a href="#" class="card card2">150 + hours<br>of Video</a>
-                    <a href="#" class="card card3">Study<br>Material</a>
-                    <a href="#" class="card card4 liveClass">Live<br>Interactive<br>Classrooms</a>
+                    <a href="#" class="card card1" target="_blank">200 +<br>Lectures</a>
+                    <a href="#" class="card card2" target="_blank">150 + hours<br>of Video</a>
+                    <a href="#" class="card card3" target="_blank">Study<br>Material</a>
+                    <a href="#" class="card card4 liveClass" target="_blank">Live<br>Interactive<br>Classrooms</a>
                 </div>
                 <a href="#">Join Now</a>
             </div>
@@ -714,19 +714,16 @@
 
     function getClassLaunchURL() {
         let xhr = new XMLHttpRequest();
-        xhr.open("POST", "https://api.braincert.com/v2/getclasslaunch?apikey=zVPjcDUW3ysSEAvnVZNX&class_id=256331&userId=19&userName=Teacher&isTeacher=1&courseName=education\n" +
-            "&lessonName=tester&lessonTime=60&isRecord=0", true);
+        let time = new Date();
+        let uniqueID = time.getTime() + Math.floor(Math.random());
+        xhr.open("POST", `https://api.braincert.com/v2/getclasslaunch?apikey=zVPjcDUW3ysSEAvnVZNX&class_id=256861&userId=${uniqueID}&userName=Student${uniqueID}&isTeacher=0&courseName=education\n" +
+            "&lessonName=studentTester&lessonTime=60&isRecord=0`, true);
         xhr.onload = function (e) {
             if (xhr.readyState === 4) {
                 if (xhr.status === 200) {
                     // console.log(xhr.response);
                     let response = JSON.parse(xhr.response);
-                    console.log(response);
-                    liveClassBtn.addEventListener('click', function() {
-                        let classID = response;
-                        this.setAttribute('href', `${classID.launchurl}`);
-                        // console.log(this);
-                    });
+                    liveClassBtn.setAttribute('href', `${response.launchurl}`);
                 } else {
                     console.error(xhr.statusText);
                     return null;

@@ -453,6 +453,7 @@
                             cur.addEventListener('click', updateCalendar);
                         });
                         listClass();
+                        scheduleClass();
                     }
                 });
         })
@@ -492,11 +493,26 @@
         xhr.send(null);
     }
 
-
-
-    function classesListFn() {
-        console.log(classesList[0].date);
+    function scheduleClass() {
+        let xhr = new XMLHttpRequest();
+        xhr.open("POST", "http://class.cymatic.in/v2/schedule?apikey=zVPjcDUW3ysSEAvnVZNX&title=schedule&timezone=33&date=2019-11-06&start_time=2:20 PM&end_time=3:20PM", true);
+        xhr.onload = function (e) {
+            if (xhr.readyState === 4) {
+                if (xhr.status === 200) {
+                    // console.log(xhr.response);
+                    let response = JSON.parse(xhr.response);
+                    console.log(response);
+                } else {
+                    console.error(xhr.statusText);
+                }
+            }
+        };
+        xhr.onerror = function (e) {
+            console.error(xhr.statusText);
+        };
+        xhr.send(null);
     }
+
 </script>
 
 </body>
