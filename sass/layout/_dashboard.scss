@@ -29,6 +29,7 @@
 
     &.notLoggedIn {
       padding: 120px 0;
+      border: none;
     }
 
     &.borderNone {
@@ -36,67 +37,69 @@
     }
 
     > .teacherLogIn {
-      max-width: 450px;
-      margin: 0 auto;
-      background: #eee;
-      padding: 30px 60px;
-      border-radius: 3px;
-      box-shadow: 0 5px 10px rgba(0,0,0,0.4);
-      display: block;
+      > form {
+        max-width: 450px;
+        margin: 0 auto;
+        background: #eee;
+        padding: 30px 60px;
+        border-radius: 3px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+        display: block;
 
-      &.none {
-        display: none;
-      }
-
-      > h2 {
-        text-align: center;
-      }
-
-      > * {
-        margin: 16px 0;
-        width: 100%;
-      }
-
-      > label {
-        font-size: 18px;
-        font-weight: 700;
-        letter-spacing: 2px;
-        color: rgba(0,0,0,.8);
-      }
-
-      > .input--box {
-        @include flexCenter();
-        justify-content: flex-start;
-        border: 1px solid rgba(128, 128, 128, 0.39);
-        background: #fff;
-        padding-left: 25px;
-
-        > img {
-          height: 20px;
+        &.none {
+          display: none;
         }
 
-        > input {
-          height: 40px;
-          outline: none;
-          border: none;
-          border-left: 1px solid rgba(128, 128, 128, 0.39);
-          font-size: 21px;
+        > h2 {
+          text-align: center;
         }
-      }
 
-      > .forgotPw {
-        display: block;
-        color: #22a2a4;
-        text-align: right;
-      }
+        > * {
+          margin: 16px 0;
+          width: 100%;
+        }
 
-      > .logInBtn--teacher {
-        padding: 14px 0;
-        display: block;
-        text-align: center;
-        background: #22a2a4;
-        border-radius: 5px;
-        color: #000;
+        > label {
+          font-size: 18px;
+          font-weight: 700;
+          letter-spacing: 2px;
+          color: rgba(0,0,0,.8);
+        }
+
+        > .input--box {
+          @include flexCenter();
+          justify-content: flex-start;
+          border: 1px solid rgba(128, 128, 128, 0.39);
+          background: #fff;
+          padding-left: 25px;
+
+          > img {
+            height: 20px;
+          }
+
+          > input {
+            height: 40px;
+            outline: none;
+            border: none;
+            border-left: 1px solid rgba(128, 128, 128, 0.39);
+            font-size: 21px;
+          }
+        }
+
+        > .forgotPw {
+          display: block;
+          color: #22a2a4;
+          text-align: right;
+        }
+
+        > .logInBtn--teacher {
+          padding: 14px 0;
+          display: block;
+          text-align: center;
+          background: #22a2a4;
+          border-radius: 5px;
+          color: #000;
+        }
       }
     }
 

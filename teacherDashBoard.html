@@ -198,31 +198,33 @@
 <!--Hero Section-->
 <div class="hero_Section dashboard">
 
-    <div class="wrapper"> <!-- If not loggedIn, notLoggedIn class should be present -->
+    <div class="wrapper notLoggedIn"> <!-- If not loggedIn, notLoggedIn class should be present -->
 
-        <div class="teacherLogIn none">
-            <h2>Teacher Login</h2>
-            <label for="">USER ID</label>
-            <div class="input--box">
-                <img src="./img/dashboard_section/userSmall.png" alt="">
-                <input type="text">
-            </div>
-            <label for="">PASSWORD</label>
-            <div class="input--box">
-                <img src="./img/dashboard_section/pwSmall.png" alt="">
-                <input type="password">
-            </div>
-            <a href="#" class="forgotPw">Recover Password</a>
-            <a class="logInBtn--teacher">
-                Login
-            </a>
+        <div class="teacherLogIn">
+            <form action="">
+                <h2>Teacher Login</h2>
+                <label for="">USER ID</label>
+                <div class="input--box">
+                    <img src="./img/dashboard_section/userSmall.png" alt="">
+                    <input type="text">
+                </div>
+                <label for="">PASSWORD</label>
+                <div class="input--box">
+                    <img src="./img/dashboard_section/pwSmall.png" alt="">
+                    <input type="password">
+                </div>
+                <a href="#" class="forgotPw">Recover Password</a>
+                <button type="submit" class="logInBtn--teacher">
+                    Login
+                </button>
+            </form>
         </div>
 
-        <div class="dash__fav">
+        <div class="dash__fav none">
             <img src="./img/dashboard_section/favorite.svg" alt="">
         </div>
 
-        <div class="dashboard__container teacher">
+        <div class="dashboard__container teacher none">
             <div class="left">
                 <div class="person">
                     <img src="./img/yash.jpg" alt="">

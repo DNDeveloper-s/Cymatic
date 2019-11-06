@@ -2728,11 +2728,12 @@ input:focus {
 }
 .hero_Section.dashboard > .wrapper.notLoggedIn {
   padding: 120px 0;
+  border: none;
 }
 .hero_Section.dashboard > .wrapper.borderNone {
   border: none;
 }
-.hero_Section.dashboard > .wrapper > .teacherLogIn {
+.hero_Section.dashboard > .wrapper > .teacherLogIn > form {
   max-width: 450px;
   margin: 0 auto;
   background: #eee;
@@ -2741,23 +2742,23 @@ input:focus {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
   display: block;
 }
-.hero_Section.dashboard > .wrapper > .teacherLogIn.none {
+.hero_Section.dashboard > .wrapper > .teacherLogIn > form.none {
   display: none;
 }
-.hero_Section.dashboard > .wrapper > .teacherLogIn > h2 {
+.hero_Section.dashboard > .wrapper > .teacherLogIn > form > h2 {
   text-align: center;
 }
-.hero_Section.dashboard > .wrapper > .teacherLogIn > * {
+.hero_Section.dashboard > .wrapper > .teacherLogIn > form > * {
   margin: 16px 0;
   width: 100%;
 }
-.hero_Section.dashboard > .wrapper > .teacherLogIn > label {
+.hero_Section.dashboard > .wrapper > .teacherLogIn > form > label {
   font-size: 18px;
   font-weight: 700;
   letter-spacing: 2px;
   color: rgba(0, 0, 0, 0.8);
 }
-.hero_Section.dashboard > .wrapper > .teacherLogIn > .input--box {
+.hero_Section.dashboard > .wrapper > .teacherLogIn > form > .input--box {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2766,22 +2767,22 @@ input:focus {
   background: #fff;
   padding-left: 25px;
 }
-.hero_Section.dashboard > .wrapper > .teacherLogIn > .input--box > img {
+.hero_Section.dashboard > .wrapper > .teacherLogIn > form > .input--box > img {
   height: 20px;
 }
-.hero_Section.dashboard > .wrapper > .teacherLogIn > .input--box > input {
+.hero_Section.dashboard > .wrapper > .teacherLogIn > form > .input--box > input {
   height: 40px;
   outline: none;
   border: none;
   border-left: 1px solid rgba(128, 128, 128, 0.39);
   font-size: 21px;
 }
-.hero_Section.dashboard > .wrapper > .teacherLogIn > .forgotPw {
+.hero_Section.dashboard > .wrapper > .teacherLogIn > form > .forgotPw {
   display: block;
   color: #22a2a4;
   text-align: right;
 }
-.hero_Section.dashboard > .wrapper > .teacherLogIn > .logInBtn--teacher {
+.hero_Section.dashboard > .wrapper > .teacherLogIn > form > .logInBtn--teacher {
   padding: 14px 0;
   display: block;
   text-align: center;
