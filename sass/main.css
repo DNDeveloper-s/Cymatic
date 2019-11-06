@@ -1195,6 +1195,11 @@ ul {
   height: auto;
   margin-top: 10px;
 }
+@media screen and (max-width: 1260px) {
+  .wrapper.about {
+    margin-top: -10px;
+  }
+}
 .wrapper.classes {
   max-width: 33340px;
 }
@@ -1365,8 +1370,18 @@ ul {
   font-size: 35px;
   letter-spacing: 2px;
 }
+@media screen and (max-width: 810px) {
+  .wrapper > .classesContent > .heroBg {
+    zoom: 0.7;
+  }
+}
+@media screen and (max-width: 360px) {
+  .wrapper > .classesContent > .heroBg {
+    zoom: 0.5;
+  }
+}
 .wrapper > .classesContent > .topContent {
-  margin: -140px auto 100px;
+  margin: -100px auto 100px;
   max-width: 1010px;
   background-image: url("../img/pricing_section/gradient_course_details.png");
   background-size: cover;
@@ -2681,10 +2696,35 @@ input:focus {
 .hero_Section.dashboard {
   margin-top: 110px;
 }
+@media screen and (max-width: 1260px) {
+  .hero_Section.dashboard {
+    margin-top: 90px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .hero_Section.dashboard {
+    margin-top: 80px;
+  }
+}
 .hero_Section.dashboard > .wrapper {
   height: auto;
   border-bottom: 60px solid rgba(0, 0, 0, 0.8);
   box-sizing: content-box;
+}
+@media screen and (max-width: 1260px) {
+  .hero_Section.dashboard > .wrapper {
+    zoom: 0.88;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .hero_Section.dashboard > .wrapper {
+    zoom: 0.75;
+  }
+}
+@media screen and (max-width: 964px) {
+  .hero_Section.dashboard > .wrapper {
+    zoom: 0.65;
+  }
 }
 .hero_Section.dashboard > .wrapper.notLoggedIn {
   padding: 120px 0;
@@ -3017,6 +3057,30 @@ input:focus {
 .hero_Section.dashboard > .wrapper > .dashboard__container > .right .breakBottom {
   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
   padding: 18px 0;
+}
+
+.scheduleClass {
+  max-width: 500px;
+  margin: 80px auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.scheduleClass > a {
+  margin: 40px 0;
+  padding: 10px 60px;
+  border: 1px solid #0d72a4;
+  background: #22a2a4;
+  color: #eee;
+  transition: 0.3s;
+  letter-spacing: 1px;
+}
+.scheduleClass > a:hover {
+  border: 1px solid #22a2a4;
+  background: #0d72a4;
+  color: #fff;
 }
 
 #calendar {

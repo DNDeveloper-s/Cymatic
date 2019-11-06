@@ -534,6 +534,10 @@ $nav-btn-font-size: 12px;
   &.about {
     height: auto;
     margin-top: 10px;
+
+    @media screen and (max-width: $break-medium-fix1) {
+      margin-top: -10px;
+    }
   }
 
   &.classes {
@@ -705,10 +709,18 @@ $nav-btn-font-size: 12px;
         font-size: 35px;
         letter-spacing: 2px;
       }
+
+      @media screen and (max-width: $break-hero-flex) {
+        zoom: 0.7;
+      }
+
+      @media screen and (max-width: $break-choose) {
+        zoom: 0.5;
+      }
     }
 
     > .topContent {
-      margin: -140px auto 100px;
+      margin: -100px auto 100px;
       max-width: 1010px;
       background-image: url("../img/pricing_section/gradient_course_details.png");
       background-size: cover;

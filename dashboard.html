@@ -31,8 +31,7 @@
 
             let calendar = new FullCalendar.Calendar(calendarEl, {
                 plugins: [ 'dayGrid', 'interaction' ],
-                defaultView: 'dayGridMonth',
-                selectable: true
+                defaultView: 'dayGridMonth'
             });
 
             calendar.render();
@@ -271,6 +270,15 @@
 
 </div>
 
+<!-- Schedule a Class -->
+<div class="scheduleClass">
+    <input class="dateSch" type="text" placeholder="Date: eg. 2019-10-28">
+    <input class="startSch" type="text" placeholder="Start Time: eg. 9:00 AM">
+    <input class="endSch" type="text" placeholder="End Time: eg. 11:00 AM">
+    <a class="btnSch" href="#">Schedule</a>
+    <input class="classIDReadOnly" type="text" readonly>
+</div>
+
 
 <!--Request Section-->
 <section class="requestSection">
@@ -365,7 +373,6 @@
 <script src="./js/intlTelInput.min.js"></script>
 <script src="./js/owl.carousel.min.js"></script>
 <script src="./js/pricing.js"></script>
-<script src="./js/login.js"></script>
 <script>
     const input4 = document.querySelector("#phone4");
     window.intlTelInput(input4);
@@ -493,15 +500,27 @@
         xhr.send(null);
     }
 
-    function scheduleClass() {
+    let btnSch = document.querySelector('.btnSch');
+
+    btnSch.addEventListener('click', function(e) {
+        e.preventDefault();
+        let date = document.querySelector('.dateSch').value;
+        let start = document.querySelector('.startSch').value;
+        let end = document.querySelector('.endSch').value;
+        scheduleClass(date, start, end);
+    });
+
+    function scheduleClass(date, start, end) {
         let xhr = new XMLHttpRequest();
-        xhr.open("POST", "http://class.cymatic.in/v2/schedule?apikey=zVPjcDUW3ysSEAvnVZNX&title=schedule&timezone=33&date=2019-11-06&start_time=2:20 PM&end_time=3:20PM", true);
+        xhr.open("POST", `http://class.cymatic.in/v2/schedule?apikey=zVPjcDUW3ysSEAvnVZNX&title=schedule&timezone=33&date=${date}&start_time=${start}&end_time=${end}`, true);
         xhr.onload = function (e) {
             if (xhr.readyState === 4) {
                 if (xhr.status === 200) {
                     // console.log(xhr.response);
                     let response = JSON.parse(xhr.response);
                     console.log(response);
+                    let classIDReadOnly = document.querySelector('.classIDReadOnly');
+                    classIDReadOnly.value = response.class_id;
                 } else {
                     console.error(xhr.statusText);
                 }

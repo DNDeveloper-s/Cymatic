@@ -1,10 +1,31 @@
 .hero_Section.dashboard {
   margin-top: 110px;
 
+
+  @media screen and (max-width: $break-medium-fix1) {
+    margin-top: 90px;
+  }
+
+  @media screen and (max-width: $break-nav) {
+    margin-top: 80px;
+  }
+
   > .wrapper {
     height: auto;
     border-bottom: 60px solid rgba(0,0,0,0.8);
     box-sizing: content-box;
+
+    @media screen and (max-width: $break-medium-fix1) {
+      zoom: 0.88;
+    }
+
+    @media screen and (max-width: $break-medium-md) {
+      zoom: 0.75;
+    }
+
+    @media screen and (max-width: $break-hero) {
+      zoom: 0.65;
+    }
 
     &.notLoggedIn {
       padding: 120px 0;
@@ -339,6 +360,32 @@
           padding: 18px 0;
         }
       }
+    }
+  }
+}
+
+.scheduleClass {
+  max-width: 500px;
+  margin: 80px auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  > a {
+    margin: 40px 0;
+    padding: 10px 60px;
+    border: 1px solid #0d72a4;
+    background: #22a2a4;
+    color: #eee;
+    transition: .3s;
+    letter-spacing: 1px;
+
+    &:hover {
+      border: 1px solid #22a2a4;
+      background: #0d72a4;
+      color: #fff;
     }
   }
 }
