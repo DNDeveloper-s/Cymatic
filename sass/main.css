@@ -1197,7 +1197,7 @@ ul {
 }
 @media screen and (max-width: 1260px) {
   .wrapper.about {
-    margin-top: -10px;
+    margin-top: -29px;
   }
 }
 .wrapper.classes {
@@ -3739,6 +3739,7 @@ input:focus {
 }
 .wrapper > .finalizingContent > .payment--details > .payment--mode__container > .input__mode > input {
   zoom: 1.3;
+  margin-right: 20px;
 }
 .wrapper > .finalizingContent > .payment--details > .payment--mode__container > a {
   margin: 20px 0;
